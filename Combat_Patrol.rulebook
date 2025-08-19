@@ -1,6 +1,6 @@
 {
   "name": "Combat Patrol",
-  "revision": "10.13.0",
+  "revision": "10.14.1",
   "game": "Warhammer 40k",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -19778,9 +19778,50 @@
           }
         }
       },
-      "Ranged Weapon§Khorne Berzerkers-Plasm pistol - supercharged": {
+      "Ranged Weapon§Khorne Berzerkers-Plasma pistol": {
         "aspects": {
-          "Label": "Plasm pistol - supercharged"
+          "Label": "Plasma pistol"
+        },
+        "assets": {
+          "traits": [
+            "Ranged Weapon§Khorne Berzerkers-Plasma pistol - standard",
+            "Ranged Weapon§Khorne Berzerkers-Plasma pistol - supercharged"
+          ]
+        }
+      },
+      "Ranged Weapon§Khorne Berzerkers-Plasma pistol - standard": {
+        "aspects": {
+          "Label": "Standard"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Pistol"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 1
+          },
+          "AP": {
+            "value": -2
+          },
+          "BS": {
+            "value": 4
+          },
+          "D": {
+            "value": 1
+          },
+          "Range": {
+            "value": 12
+          },
+          "S": {
+            "value": 7
+          }
+        }
+      },
+      "Ranged Weapon§Khorne Berzerkers-Plasma pistol - supercharged": {
+        "aspects": {
+          "Label": "Supercharged"
         },
         "assets": {
           "traits": [
@@ -19806,47 +19847,6 @@
           },
           "S": {
             "value": 8
-          }
-        }
-      },
-      "Ranged Weapon§Khorne Berzerkers-Plasma pistol": {
-        "aspects": {
-          "Label": "Plasma pistol"
-        },
-        "assets": {
-          "traits": [
-            "Ranged Weapon§Khorne Berzerkers-Plasma pistol - standard",
-            "Ranged Weapon§Khorne Berzerkers-Plasm pistol - supercharged"
-          ]
-        }
-      },
-      "Ranged Weapon§Khorne Berzerkers-Plasma pistol - standard": {
-        "aspects": {
-          "Label": "Plasma pistol - standard"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Pistol"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 1
-          },
-          "AP": {
-            "value": -2
-          },
-          "BS": {
-            "value": 4
-          },
-          "D": {
-            "value": 1
-          },
-          "Range": {
-            "value": 12
-          },
-          "S": {
-            "value": 7
           }
         }
       },
@@ -19994,7 +19994,7 @@
       },
       "Ranged Weapon§Legionaries—Plasma pistol – Plasma pistol - standard": {
         "aspects": {
-          "Label": "Plasma pistol - standard"
+          "Label": "standard"
         },
         "assets": {
           "traits": [
@@ -20024,7 +20024,7 @@
       },
       "Ranged Weapon§Legionaries—Plasma pistol – Plasma pistol - supercharge": {
         "aspects": {
-          "Label": "Plasma pistol - supercharge"
+          "Label": "supercharge"
         },
         "assets": {
           "traits": [
@@ -31225,6 +31225,14 @@
           ],
           "Source": [
             "10th Edition Combat Patrol"
+          ],
+          "Keywords": [
+            "Battleline",
+            "Chaos",
+            "Infantry",
+            "Rubric Marines",
+            "Rubricae",
+            "Tzeentch"
           ]
         }
       },
@@ -31252,6 +31260,22 @@
                 ]
               }
             }
+          ]
+        },
+        "keywords": {
+          "Faction": [
+            "Thousand Sons"
+          ],
+          "Keywords": [
+            "Chaos",
+            "Fly",
+            "Mounted",
+            "Mutant",
+            "Tzaangor Enlightened",
+            "Tzeentch"
+          ],
+          "Source": [
+            "10th Edition Combat Patrol"
           ]
         }
       },
