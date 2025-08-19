@@ -1,6 +1,6 @@
 {
   "name": "Combat Patrol",
-  "revision": "10.12.1",
+  "revision": "10.13.0",
   "game": "Warhammer 40k",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -9,7 +9,7 @@
   "wip": false,
   "dependencies": [
     {
-      "slug": "PCJ8SD",
+      "slug": "UU4VT3",
       "name": "40k10e",
       "game": "Warhammer 40k",
       "source": "https://raw.githubusercontent.com/RosterizerTestData/Warhammer40k10e/main/Warhammer_40k_10e.rulebook"
@@ -333,6 +333,61 @@
                   ]
                 ],
                 "value": "Dark Zealots"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "stratsFrenzied Reavers": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Stratagem§Horrifying Butchery"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Stratagem§Berserk Resilience"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Stratagem§Bloodlust"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Combat Patrol",
+                    "value"
+                  ]
+                ],
+                "value": "Frenzied Reavers"
               }
             ],
             "evaluate": "AND",
@@ -828,6 +883,61 @@
                   ]
                 ],
                 "value": "Morgrim’s Butchas"
+              }
+            ],
+            "evaluate": "AND",
+            "failState": "pass"
+          },
+          "stratsPrism of Zadophon": {
+            "actions": [
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Stratagem§Mutable Illusion"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Stratagem§Paradigm of Rivalry"
+              },
+              {
+                "actionType": "add",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "traits"
+                  ]
+                ],
+                "value": "Stratagem§Curse Foretold"
+              }
+            ],
+            "evals": [
+              {
+                "actionable": true,
+                "not": false,
+                "operator": "AND",
+                "paths": [
+                  [
+                    "{roster}",
+                    "stats",
+                    "Combat Patrol",
+                    "value"
+                  ]
+                ],
+                "value": "Prism of Zadophon"
               }
             ],
             "evaluate": "AND",
@@ -2023,6 +2133,14 @@
         },
         "text": "Each time this model’s unit Consolidates, it can move up to 6″ instead of up to 3″."
       },
+      "Ability§A worthy skull": {
+        "keywords": {
+          "Keywords": [
+            "Other"
+          ]
+        },
+        "text": "Each time this model makes a melee attack that targets a CHARACTER unit, you can re-roll\nthe Hit roll and you can re-roll the Wound roll. Each time this model's unit destroys an\nenemy CHARACTER model, you gain 1CP."
+      },
       "Ability§Acts of Faith": {
         "keywords": {
           "Keywords": [
@@ -2055,6 +2173,14 @@
         },
         "text": "While this model is leading a unit, each time a model in that unit makes a melee attack, add 1 to the Hit roll."
       },
+      "Ability§Bestial Prophet": {
+        "keywords": {
+          "Keywords": [
+            "Other"
+          ]
+        },
+        "text": "While this model is leading a unit each time a model\nin that unit makes an attack, add 1 to the Hitroll."
+      },
       "Ability§Bladeguard": {
         "keywords": {
           "Keywords": [
@@ -2069,7 +2195,7 @@
             "Faction"
           ]
         },
-        "text": "If your Army Faction is World Eaters, at the start of the battle round, you can make a Blessings of Khorne roll. To do so, roll eight D6. You can then use those dice to activate up to two Blessings of Khorne from the Blessings of Khorne list (see right). Each Blessing of Khorne specifies the dice results it requires (where a number is specified, a double or triple of that value or higher is required). You can only activate each Blessing of Khorne once per battle round. Any unused dice from the Blessings of Khorne roll are then discarded.\n\nOnce activated, each Blessing of Khorne applies to all units from your army with this ability until the end of the battle round.\n\n*Example: Ash makes their Blessings of Khorne roll and gets the following dice: 1, 2, 2, 2, 3, 4, 6, 6. First they use the two 6s to activate Warp Blades (which requires a double 5+), leaving the following dice: 1, 2, 2, 2, 3, 4. They then use the two 2s to activate Wrathful Devotion (which requires any double), leaving the following dice: 1, 2, 3, 4. However, now that they have activated two Blessings of Khorne, they cannot activate any more and the remaining dice are discarded.*\n\n## RAGE-FUELLED INVIGORATION\n### ANY DOUBLE\nAdd 2″ to the Move characteristic of models in this unit.\n## WRATHFUL DEVOTION\n### ANY DOUBLE\nModels in this unit have the Feel No Pain 6+ ability. If models in this unit already have the Feel No Pain ability, add 1 to their Feel No Pain rolls. \n## MARTIAL EXCELLENCE\n### DOUBLE 3+\nMelee weapons equipped by models in this unit have the [SUSTAINED HITS 1] ability.\n## TOTAL CARNAGE\n### DOUBLE 4+ OR ANY TRIPLE\nEach time a model in this unit is destroyed by a melee attack, if that model has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking model’s unit has finished making its attacks, and is then removed from play.\n## WARP BLADES\n### DOUBLE 5+ OR ANY TRIPLE\nMelee weapons equipped by models in this unit have the [LETHAL HITS] ability.\n## UNBRIDLED BLOODLUST\n### DOUBLE 6 OR TRIPLE 4+\nThis unit is eligible to declare a charge in a turn in which it Advanced."
+        "text": "At the start of the battle round, you can make a Blessings of Khorne roll. To do so, roll five D6.\nYou can then use those dice to activate up to two Blessings of Khorne (see below). Each\nBlessing of Khorne specifies the dice results it requires (where a number is specified, a\ndouble or triple of that value or higher is required). You can only activate each Blessing of\nKhorne once per battle round. Any unused dice from the Blessings of Khorne roll are then\ndiscarded. Once activated, each Blessing of Khorne applies to all units from your army with\nthis ability until the end of the battle round.\n\n*Example: Eric makes a Blessings of Khorne roll, getting the following: 1, 2, 2, 6, 6. First he\nuses the two 6s to activate Martial Excellence (which requires a double 4+), leaving the\nfollowing dice: 1, 2, 2. He then uses the two 2s to activate Rage-fuelled Invigoration (which\nrequires a double 2+). As the 1 can't be used, this is then discarded.*\n\nRage-Fuelled Invigoration [2, 2, +]            \nEach time a model in this unit makes a Pile-in or Consolidation move, it can move up to 6\"\ninstead of up to 3\"\n\nTotal Carnage [3, 3, +]   \nEach time a model in this unit is destroyed by a melee attack, if it has not fought this phase,\nroll one D6:** on a 4+, do not remove it from play. The destroyed model can fight after the\nattacking unit has finished making its attacks, and is then removed from play.\n\n##Martial Excellence [4, 4, +]\nOR [1, 1, 1, +]  \nMelee weapons equipped by models in this unit have the [SUSTAINED HITS 1] ability."
       },
       "Ability§Breach And Clear": {
         "keywords": {
@@ -2085,7 +2211,7 @@
             "Faction"
           ]
         },
-        "text": "Scarab Occult Sorcerer Model Only\n\nAt the end of your Command phase, if this unit’s Aspiring Sorcerer or Scarab Occult Sorcerer model is on the battlefield and not Battle-shocked, it generates 1 Cabal point."
+        "text": "At the start of your Shooting phase, one\nmodel from your army with this ability can\nattempt one Ritual from those listed below.\nTo do so, select one model from your army\nwith this ability that has not yet attempted a\nRitual this turn and select one Ritual no\nmodel from your army has manifested this\nturn, then take a Psychic test for that model\nby following the sequence below.\n\nPsychic Test Sequence\nRoll 2D6\n\nChannel the Warp (Optional) +1D6;\nThen, if one or more doubles or triples were\nrolled during this test, that model's unit\nsuffers D3 mortal wounds.\n\nIf that model is not destroyed, the combined\ntotal of all the dice rolled during this test is\nthe Psychic test result. If this equals or\nexceeds the Warp Charge value of the Ritual\nbeing attempted, that model manifests that\nRitual and you resolve its effects."
       },
       "Ability§Close-quarters Firepower": {
         "keywords": {
@@ -2352,6 +2478,17 @@
         },
         "text": "Each time an attack is allocated to this model, subtract 1 from the Damage characteristic of that attack."
       },
+      "Ability§Karagar the Blooded-Blessings of Khorne": {
+        "aspects": {
+          "Label": "Blessings of Khorne"
+        },
+        "keywords": {
+          "Keywords": [
+            "Faction"
+          ]
+        },
+        "text": "If your Army Faction is World Eaters, at the start of the battle round, you can make a Blessings of Khorne roll. To do so, roll eight D6. You can then use those dice to activate up to two Blessings of Khorne from the Blessings of Khorne list (see right). Each Blessing of Khorne specifies the dice results it requires (where a number is specified, a double or triple of that value or higher is required). You can only activate each Blessing of Khorne once per battle round. Any unused dice from the Blessings of Khorne roll are then discarded.\n\nOnce activated, each Blessing of Khorne applies to all units from your army with this ability until the end of the battle round.\n\n*Example: Ash makes their Blessings of Khorne roll and gets the following dice: 1, 2, 2, 2, 3, 4, 6, 6. First they use the two 6s to activate Warp Blades (which requires a double 5+), leaving the following dice: 1, 2, 2, 2, 3, 4. They then use the two 2s to activate Wrathful Devotion (which requires any double), leaving the following dice: 1, 2, 3, 4. However, now that they have activated two Blessings of Khorne, they cannot activate any more and the remaining dice are discarded.*\n\n## RAGE-FUELLED INVIGORATION\n### ANY DOUBLE\nAdd 2″ to the Move characteristic of models in this unit.\n## WRATHFUL DEVOTION\n### ANY DOUBLE\nModels in this unit have the Feel No Pain 6+ ability. If models in this unit already have the Feel No Pain ability, add 1 to their Feel No Pain rolls. \n## MARTIAL EXCELLENCE\n### DOUBLE 3+\nMelee weapons equipped by models in this unit have the [SUSTAINED HITS 1] ability.\n## TOTAL CARNAGE\n### DOUBLE 4+ OR ANY TRIPLE\nEach time a model in this unit is destroyed by a melee attack, if that model has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking model’s unit has finished making its attacks, and is then removed from play.\n## WARP BLADES\n### DOUBLE 5+ OR ANY TRIPLE\nMelee weapons equipped by models in this unit have the [LETHAL HITS] ability.\n## UNBRIDLED BLOODLUST\n### DOUBLE 6 OR TRIPLE 4+\nThis unit is eligible to declare a charge in a turn in which it Advanced."
+      },
       "Ability§Lead the Righteous": {
         "keywords": {
           "Keywords": [
@@ -2520,6 +2657,14 @@
         },
         "text": "GAINING PAIN TOKENS\n\nIf your Army Faction is Drukhari, you gain Pain tokens as follows:\n- At the start of the battle, depending on the battle size:\n\n- 1 PAIN TOKEN - COMBAT PATROL\n- 2 PAIN TOKENS - INCURSION\n- 3 PAIN TOKENS - STRIKE FORCE \n- 4 PAIN TOKENS - ONSLAUGHT \n\n\n- Each time an enemy unit is destroyed, you gain 1 Pain token.\n- Each time an enemy unit fails a Battle-shock test, you gain 1 Pain token. Each time you gain a Pain token, keep it to one side – this is your Pain token pool.\n\nEMPOWERED THROUGH PAIN\nAt the start of any phase, you can expend one or more Pain tokens from your Pain token pool. Each time you do, select one unit from your army with the Power from Pain ability. Until the end of the phase, that unit is Empowered, and gains the abilities listed below, depending on the phase.\n\n- Empowered in the Movement or Charge phase:\n- You can re-roll Advance or Charge rolls made for that unit.\n\n- Empowered in the Shooting or Fight phase:\n- Each time a model in that unit makes an attack, you can re-roll the Hit roll and, if it is a melee attack, improve the Armour Penetration characteristic of that attack by 1."
       },
+      "Ability§Prophesied Doom": {
+        "keywords": {
+          "Keywords": [
+            "Other"
+          ]
+        },
+        "text": "Each time this unit ends a Charge move, select one\nenemy unit within Engagement Range of it, then roll\none D6 for each model in this unit that is within\nEngagement Range of that enemy unit: for each 4+,\nthat enemy unit suffers 1 mortal wound."
+      },
       "Ability§Psychological Saboteur (aura)": {
         "keywords": {
           "Keywords": [
@@ -2640,6 +2785,14 @@
         },
         "text": "Once per turn, when an enemy unit ends a Normal, Advance or Fall Back move within 9″ of this unit, if this unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to D6″."
       },
+      "Ability§Spirit Snare": {
+        "keywords": {
+          "Keywords": [
+            "Other"
+          ]
+        },
+        "text": "Each time a friendly THOUSAND SONS PSYKER mode\nwith the Cabal of Sorcerers ability is destroyed while\nwithin 9\" of one or more models with this ability,\nselect one of those models with this ability: until the\nend of the battle, each time the selected model\nattempts a Ritual, add 1 to the Psychic test result (to a\nmaximum of+2)."
+      },
       "Ability§Spiritual Leader": {
         "keywords": {
           "Keywords": [
@@ -2711,6 +2864,17 @@
           ]
         },
         "text": "If your Army Faction is **Grey Knights**, at the end of your opponent’s turn, you can select a number of **Grey Knights** units from your army with this ability (excluding units that are within Engagement Range of one or more enemy units). The maximum number of units you can select depends on the battle size, as follows:\n|||\n|---|---|\n|COMBAT PATROL|UP TO 1 UNIT|\n|INCURSION|UP TO 2 UNITS|\n|STRIKE FORCE|UP TO 3 UNITS|\n|ONSLAUGHT|UP TO 4 UNITS|\n\nOnce you have made your selections, remove those units from the battlefield. In the Reinforcements step of your next Movement phase, set each of those units up anywhere on the battlefield that is more than 9″ horizontally away from all enemy models. Any units that are not on the battlefield at the end of the battle count as destroyed."
+      },
+      "Ability§The Coven Temporus-Cabal of Sorcerers": {
+        "aspects": {
+          "Label": "Cabal of Sorcerers"
+        },
+        "keywords": {
+          "Keywords": [
+            "Faction"
+          ]
+        },
+        "text": "At the end of your Command phase, each model from your army with this ability that is on\nthe battlefield (excluding Battle-shocked models) generates you a number of Cabal points\nequal to the number shown in its ability (e.g. a model with the Cabal of Sorcerers 2 ability\nwould generate you 2 Cabal points). The combined total of these is your Cabal points pool.\n\nDuring the battle round, you can use Rituals from the list below, deducting the Cabal points\ncost of each one from your Cabal points pool. If you do not have enough Cabal points for a\nRitual, you cannot use it. Each Ritual can only be used once per phase. At the start of your\nnext Command phase, your Cabal points pool resets to zero. Each time you use a Ritual,\nselect one THOUSAND SONS PSYKER model from your army, then apply that Ritual's effect\nusing that PSYKER.\n\nWeaver of Fates (Psychic) -\n2 Cabal points\n\nUse this Ritual at the start of any phase. Once during that phase, when a saving throw is\nfailed for a friendly THOUSAND SONS model whose unit is within 18\" of this PSYKER,\nyou can re-roll that saving throw\n\nEchoes from the Warp (Psychic) - 6 Cabal points\n\nUse this Ritual at the start of any phase. Once this phase, you can select this PSYKER's\nunit as the target of a Stratagem for 0CP, even if you have already used that Stratagem\nthis phase."
       },
       "Ability§The Destroyer Hive": {
         "keywords": {
@@ -3151,6 +3315,143 @@
           }
         }
       },
+      "Character§Frenzied Reavers-Master of Executions": {
+        "aspects": {
+          "Label": "Master of Executions"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Blessings of Khorne",
+            "Ability§A worthy skull",
+            "Ranged Weapon§Master of Execution-Bolt pistol",
+            "Melee Weapon§Master of Executions-Axe of dismemberment"
+          ]
+        },
+        "keywords": {
+          "Source": [
+            "10th Edition Combat Patrol"
+          ],
+          "Faction": [
+            "Frenzied Reavers"
+          ],
+          "Keywords": [
+            "Chaos",
+            "Character",
+            "Infantry",
+            "Khorne",
+            "Master of Executions"
+          ]
+        },
+        "stats": {
+          "Ld": {
+            "value": 6
+          },
+          "M": {
+            "value": 8
+          },
+          "OC": {
+            "value": 1
+          },
+          "Sv": {
+            "value": 3
+          },
+          "T": {
+            "value": 4
+          },
+          "W": {
+            "value": 4
+          },
+          "Warlord": {
+            "value": "-"
+          }
+        }
+      },
+      "Character§Frenzied Reavers-Vorrakh": {
+        "aspects": {
+          "Label": "Vorrakh"
+        },
+        "assets": {
+          "traits": [
+            {
+              "item": "Ability§Invulnerable",
+              "stats": {
+                "x": {
+                  "value": "4+"
+                }
+              }
+            },
+            "Melee Weapon§Vorrakh-Hellforged Weapons",
+            "Ranged Weapon§Vorrakh-Infernal cannon"
+          ]
+        },
+        "keywords": {
+          "Category": [
+            "Monster"
+          ],
+          "Keywords": [
+            "Chaos",
+            "Character",
+            "Daemon",
+            "Daemon Prince",
+            "Khorne",
+            "Monster",
+            "Vorrakh"
+          ],
+          "Source": [
+            "10th Edition Combat Patrol"
+          ],
+          "Faction": [
+            "Frenzied Reavers"
+          ]
+        },
+        "stats": {
+          "Enhancement": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 7,
+            "ranks": {
+              "Fearsome Prescense": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Enhancement§Fearsome Prescense"
+                  }
+                ]
+              },
+              "Bane of the Craven": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Enhancement§Bane of the Craven"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "tracked": true,
+            "value": null,
+            "visibility": "normal"
+          },
+          "Ld": {
+            "value": 6
+          },
+          "M": {
+            "value": 10
+          },
+          "OC": {
+            "value": 3
+          },
+          "Sv": {
+            "value": 2
+          },
+          "T": {
+            "value": 10
+          },
+          "W": {
+            "value": 10
+          }
+        }
+      },
       "Character§Gordrang’s Gitstompas—Warboss Gordrang": {
         "aspects": {
           "Label": "Warboss Gordrang"
@@ -3416,7 +3717,7 @@
         },
         "assets": {
           "traits": [
-            "Ability§Blessings of Khorne",
+            "Ability§Karagar the Blooded-Blessings of Khorne",
             {
               "item": "Ability§Invulnerable",
               "stats": {
@@ -3884,6 +4185,172 @@
           },
           "W": {
             "value": 6
+          }
+        }
+      },
+      "Character§Prism of Zadophon-Kaa'Skrek": {
+        "aspects": {
+          "Label": "Kaa'Skrek"
+        },
+        "assets": {
+          "traits": [
+            {
+              "item": "Ability§Leader",
+              "text": "\nThis model can be attached to the following unit: Tzaangor Enlightened"
+            },
+            "Ability§Cabal of Sorcerers",
+            "Ability§Bestial Prophet",
+            {
+              "item": "Ability§Invulnerable",
+              "stats": {
+                "x": {
+                  "value": "5+"
+                }
+              }
+            },
+            "Ranged Weapon§Kaa'Skrek-Baleful Devolution",
+            "Melee Weapon§Kaa'Skrek-Force stave"
+          ]
+        },
+        "keywords": {
+          "Keywords": [
+            "Chaos",
+            "Character",
+            "Fly",
+            "Infantry",
+            "Kaa'Skrek",
+            "Mounted",
+            "Mutant",
+            "Psyker",
+            "Tzaangor Shaman",
+            "Tzeentch"
+          ],
+          "Source": [
+            "10th Edition Combat Patrol"
+          ],
+          "Faction": [
+            "Prism of Zadophon"
+          ]
+        },
+        "meta": {
+          "ttsModelCode": null
+        },
+        "stats": {
+          "Ld": {
+            "value": 7
+          },
+          "M": {
+            "value": 10
+          },
+          "OC": {
+            "value": 2
+          },
+          "Sv": {
+            "value": 5
+          },
+          "T": {
+            "value": 4
+          },
+          "W": {
+            "value": 4
+          },
+          "Warlord": {
+            "value": "-"
+          }
+        }
+      },
+      "Character§Prism of Zadophon-Zadophon the Soul Eater": {
+        "aspects": {
+          "Label": "Zadophon the Soul Eater"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Cabal of Sorcerers",
+            "Ability§Spirit Snare",
+            {
+              "item": "Ability§Invulnerable",
+              "stats": {
+                "x": {
+                  "value": "4+"
+                }
+              }
+            },
+            "Melee Weapon§Zadophon the Soul Eater-Hellforged Weapons",
+            "Ranged Weapon§Zadophon the Soul Eater-Infernal Cannon"
+          ]
+        },
+        "keywords": {
+          "Category": [
+            "Monster"
+          ],
+          "Source": [
+            "10th Edition Combat Patrol"
+          ],
+          "Faction": [
+            "Prism of Zadophon"
+          ],
+          "Keywords": [
+            "Chaos",
+            "Character",
+            "Daemon",
+            "Daemon Prince",
+            "Monster",
+            "Psyker",
+            "Tzeentch",
+            "Zadophon the Soul Eater"
+          ]
+        },
+        "meta": {
+          "ttsModelCode": null
+        },
+        "removed": {
+          "stats": {}
+        },
+        "stats": {
+          "Enhancement": {
+            "dynamic": true,
+            "group": "Loadout",
+            "groupOrder": 7,
+            "ranks": {
+              "Preplexing Gibberhex": {
+                "order": 0,
+                "traits": [
+                  {
+                    "trait": "Enhancement§Preplexing Gibberhex"
+                  }
+                ]
+              },
+              "Key to the Eternity Cage": {
+                "order": 1,
+                "traits": [
+                  {
+                    "trait": "Enhancement§Key to the Eternity Cage"
+                  }
+                ]
+              }
+            },
+            "statType": "rank",
+            "tracked": true,
+            "value": "Preplexing Gibberhex",
+            "visibility": "normal"
+          },
+          "Ld": {
+            "value": 6
+          },
+          "M": {
+            "value": 9
+          },
+          "OC": {
+            "value": 3
+          },
+          "Sv": {
+            "value": 2
+          },
+          "T": {
+            "value": 10
+          },
+          "W": {
+            "value": 10
           }
         }
       },
@@ -4797,7 +5264,7 @@
         },
         "assets": {
           "traits": [
-            "Ability§Cabal of Sorcerers",
+            "Ability§The Coven Temporus-Cabal of Sorcerers",
             "Ability§Glimpse of Eternity (psychic)",
             {
               "item": "Ability§Invulnerable",
@@ -5911,6 +6378,9 @@
       "Enhancement§Baalite Bladesman": {
         "text": "Improve the Armour Penetration characteristic of melee weapons equipped by models in the bearer’s unit by 1."
       },
+      "Enhancement§Bane of the Craven": {
+        "text": "Each time an enemy unit (excluding MONSTERS and VEHICLEs) that is within Engagement\nRange of the bearer Falls Back, all models in that enemy unit must take a Desperate Escape\ntest. When doing so, if that enemy unit is Battle-shocked, subtract 1 from each of those tests."
+      },
       "Enhancement§Banishment Stone (psychic)": {
         "text": "Each time the bearer destroys an enemy Character model, roll one D6: on a 2+, you gain 1CP."
       },
@@ -5947,6 +6417,9 @@
       "Enhancement§Electro-static Flares (aura)": {
         "text": "* While a friendly T’au Empire unit (excluding Devilfish units) is within 6″ of the bearer, enemy units cannot use the Fire Overwatch Stratagem to fire at that unit and each time a ranged attack targets that unit, subtract 1 from the Hit roll.\n\n\n\n* The bearer has a 4+ invulnerable save."
       },
+      "Enhancement§Fearsome Prescense": {
+        "text": "While the bearer is not Battle-shocked, it has an Objective Control characteristic of 5."
+      },
       "Enhancement§Ferocious": {
         "text": "You can target the bearer’s unit with the Heroic Intervention Stratagem for 0CP, and can do so even if you have already used that Stratagem on a different unit this phase."
       },
@@ -5977,6 +6450,9 @@
       "Enhancement§Infernal Blessing": {
         "text": "The bearer has the Feel No Pain 5+ ability."
       },
+      "Enhancement§Key to the Eternity Cage": {
+        "text": "Once per battle, when the bearer is selected\nto fight, it can use this Enhancement. If it\ndoes, until the end of the phase, its hellforged\nweapons have an Attacks characteristic of 5, a\nStrength characteristic of 9 and a Damage\ncharacteristic of 3."
+      },
       "Enhancement§Miasmic Arrival": {
         "text": "Models in the bearer’s unit have the Deep Strike ability."
       },
@@ -5997,6 +6473,9 @@
       },
       "Enhancement§Prâgmaat Comms Uplink": {
         "text": "Add 1 to the Objective Control characteristic of models in the bearer’s unit. In addition, you can re-roll Battle-shock tests taken for the bearer’s unit."
+      },
+      "Enhancement§Preplexing Gibberhex": {
+        "text": "In your Shooting phase, after the bearer has\nshot, select one enemy unit hit by one or\nmore of those attacks; until the start of your\nnext turn, that enemy unit is pinned. While a\nunit is pinned, subtract 2 from that unit's\nMove characteristic and subtract 2 from\nCharge rolls made for that unit."
       },
       "Enhancement§Prey on the Weak": {
         "text": "In your Shooting phase, after the bearer has shot, select one enemy unit hit by one or more of those attacks made with a Rite of Possession. That enemy unit must take a Battle-shock test and when doing so, subtract 1 from the result."
@@ -8594,25 +9073,13 @@
           }
         }
       },
-      "Melee Weapon§Jakhals—Jakhal chainblades": {
+      "Melee Weapon§Jakhals-Chainblades": {
         "aspects": {
-          "Label": "Jakhal chainblades"
-        },
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Sustained Hits",
-              "stats": {
-                "x": {
-                  "value": "1"
-                }
-              }
-            }
-          ]
+          "Label": "Chainblades"
         },
         "stats": {
           "A": {
-            "value": 2
+            "value": 3
           },
           "AP": {
             "value": 0
@@ -8628,25 +9095,13 @@
           }
         }
       },
-      "Melee Weapon§Jakhals—Mauler chainblade": {
+      "Melee Weapon§Jakhals-Mauler chainblade": {
         "aspects": {
           "Label": "Mauler chainblade"
         },
-        "assets": {
-          "traits": [
-            {
-              "item": "Ability§Sustained Hits",
-              "stats": {
-                "x": {
-                  "value": "1"
-                }
-              }
-            }
-          ]
-        },
         "stats": {
           "A": {
-            "value": 2
+            "value": 3
           },
           "AP": {
             "value": -1
@@ -8655,20 +9110,20 @@
             "value": 2
           },
           "S": {
-            "value": 5
+            "value": 4
           },
           "WS": {
             "value": 5
           }
         }
       },
-      "Melee Weapon§Jakhals—Skullsmasher": {
+      "Melee Weapon§Jakhals-Skullsmasher and mangler": {
         "aspects": {
-          "Label": "Skullsmasher"
+          "Label": "Skullsmasher and mangler"
         },
         "stats": {
           "A": {
-            "value": 4
+            "value": 2
           },
           "AP": {
             "value": -1
@@ -8681,6 +9136,34 @@
           },
           "WS": {
             "value": 4
+          }
+        }
+      },
+      "Melee Weapon§Kaa'Skrek-Force stave": {
+        "aspects": {
+          "Label": "Force stave"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Psychic"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 3
+          },
+          "AP": {
+            "value": -1
+          },
+          "D": {
+            "statType": "term",
+            "value": "D3"
+          },
+          "S": {
+            "value": 5
+          },
+          "WS": {
+            "value": 3
           }
         }
       },
@@ -8815,6 +9298,140 @@
           }
         }
       },
+      "Melee Weapon§Karagar's Rampagers-Jakhals—Jakhal chainblades": {
+        "aspects": {
+          "Label": "Jakhal chainblades"
+        },
+        "assets": {
+          "traits": [
+            {
+              "item": "Ability§Sustained Hits",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 2
+          },
+          "AP": {
+            "value": 0
+          },
+          "D": {
+            "value": 1
+          },
+          "S": {
+            "value": 3
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
+      "Melee Weapon§Karagar's Rampagers-Jakhals—Mauler chainblade": {
+        "aspects": {
+          "Label": "Mauler chainblade"
+        },
+        "assets": {
+          "traits": [
+            {
+              "item": "Ability§Sustained Hits",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 2
+          },
+          "AP": {
+            "value": -1
+          },
+          "D": {
+            "value": 2
+          },
+          "S": {
+            "value": 5
+          },
+          "WS": {
+            "value": 5
+          }
+        }
+      },
+      "Melee Weapon§Karagar's Rampagers-Jakhals—Skullsmasher": {
+        "aspects": {
+          "Label": "Skullsmasher"
+        },
+        "stats": {
+          "A": {
+            "value": 4
+          },
+          "AP": {
+            "value": -1
+          },
+          "D": {
+            "value": 2
+          },
+          "S": {
+            "value": 4
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
+      "Melee Weapon§Karagar's Rampagers-Khorne Berzerkers—Berzerker chainblade": {
+        "aspects": {
+          "Label": "Berzerker chainblade"
+        },
+        "stats": {
+          "A": {
+            "value": 4
+          },
+          "AP": {
+            "value": -1
+          },
+          "D": {
+            "value": 1
+          },
+          "S": {
+            "value": 5
+          },
+          "WS": {
+            "value": 3
+          }
+        }
+      },
+      "Melee Weapon§Karagar's Rampagers-Khorne Berzerkers—Khornate eviscerator": {
+        "aspects": {
+          "Label": "Khornate eviscerator"
+        },
+        "stats": {
+          "A": {
+            "value": 3
+          },
+          "AP": {
+            "value": -2
+          },
+          "D": {
+            "value": 2
+          },
+          "S": {
+            "value": 8
+          },
+          "WS": {
+            "value": 3
+          }
+        }
+      },
       "Melee Weapon§Kataphron Destroyers—Close combat weapon": {
         "aspects": {
           "Label": "Close combat weapon"
@@ -8859,9 +9476,9 @@
           }
         }
       },
-      "Melee Weapon§Khorne Berzerkers—Berzerker chainblade": {
+      "Melee Weapon§Khorne Berzerkers-Chainblade": {
         "aspects": {
-          "Label": "Berzerker chainblade"
+          "Label": "Chainblade"
         },
         "stats": {
           "A": {
@@ -8874,14 +9491,14 @@
             "value": 1
           },
           "S": {
-            "value": 5
+            "value": 4
           },
           "WS": {
             "value": 3
           }
         }
       },
-      "Melee Weapon§Khorne Berzerkers—Khornate eviscerator": {
+      "Melee Weapon§Khorne Berzerkers-Khornate eviscerator": {
         "aspects": {
           "Label": "Khornate eviscerator"
         },
@@ -9229,6 +9846,34 @@
           },
           "S": {
             "value": 5
+          },
+          "WS": {
+            "value": 2
+          }
+        }
+      },
+      "Melee Weapon§Master of Executions-Axe of dismemberment": {
+        "aspects": {
+          "Label": "Axe of dismemberment"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Devastating Wounds",
+            "Ability§Precision"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 5
+          },
+          "AP": {
+            "value": -2
+          },
+          "D": {
+            "value": 2
+          },
+          "S": {
+            "value": 7
           },
           "WS": {
             "value": 2
@@ -9965,6 +10610,56 @@
           },
           "WS": {
             "value": 4
+          }
+        }
+      },
+      "Melee Weapon§Rubric Marines-Close combat weapon": {
+        "aspects": {
+          "Label": "Close combat weapon"
+        },
+        "stats": {
+          "A": {
+            "value": 2
+          },
+          "AP": {
+            "value": 0
+          },
+          "D": {
+            "value": 1
+          },
+          "S": {
+            "value": 4
+          },
+          "WS": {
+            "value": 3
+          }
+        }
+      },
+      "Melee Weapon§Rubric Marines-Force weapon": {
+        "aspects": {
+          "Label": "Force weapon"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Psychic"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 3
+          },
+          "AP": {
+            "value": -1
+          },
+          "D": {
+            "statType": "term",
+            "value": "D3"
+          },
+          "S": {
+            "value": 6
+          },
+          "WS": {
+            "value": 3
           }
         }
       },
@@ -10791,6 +11486,34 @@
           }
         }
       },
+      "Melee Weapon§Tzaangor Enlightened-Divining Spear": {
+        "aspects": {
+          "Label": "Divining Spear"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Lance",
+            "Ability§Precision"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 3
+          },
+          "AP": {
+            "value": -1
+          },
+          "D": {
+            "value": 2
+          },
+          "S": {
+            "value": 5
+          },
+          "WS": {
+            "value": 4
+          }
+        }
+      },
       "Melee Weapon§Tzaangors—Chainsword": {
         "aspects": {
           "Label": "Chainsword"
@@ -10900,6 +11623,28 @@
           }
         }
       },
+      "Melee Weapon§Vorrakh-Hellforged Weapons": {
+        "aspects": {
+          "Label": "Hellforged Weapons"
+        },
+        "stats": {
+          "A": {
+            "value": 16
+          },
+          "AP": {
+            "value": -1
+          },
+          "D": {
+            "value": 1
+          },
+          "S": {
+            "value": 6
+          },
+          "WS": {
+            "value": 2
+          }
+        }
+      },
       "Melee Weapon§Warboss Gordrang—’Uge choppa": {
         "aspects": {
           "Label": "’Uge choppa"
@@ -10997,6 +11742,34 @@
           },
           "WS": {
             "value": 4
+          }
+        }
+      },
+      "Melee Weapon§Zadophon the Soul Eater-Hellforged Weapons": {
+        "aspects": {
+          "Label": "Hellforged Weapons"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Devastating Wounds",
+            "Ability§Psychic"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 12
+          },
+          "AP": {
+            "value": -1
+          },
+          "D": {
+            "value": 1
+          },
+          "S": {
+            "value": 6
+          },
+          "WS": {
+            "value": 2
           }
         }
       },
@@ -11222,6 +11995,31 @@
           },
           "W": {
             "value": 2
+          }
+        }
+      },
+      "Model§Aspiring Sorcercer": {
+        "meta": {
+          "ttsModelCode": null
+        },
+        "stats": {
+          "Ld": {
+            "value": 6
+          },
+          "M": {
+            "value": 6
+          },
+          "OC": {
+            "value": 2
+          },
+          "Sv": {
+            "value": 3
+          },
+          "T": {
+            "value": 4
+          },
+          "W": {
+            "value": 3
           }
         }
       },
@@ -12323,15 +13121,12 @@
         }
       },
       "Model§Jakhal": {
-        "meta": {
-          "ttsModelCode": "{\"Name\":\"Custom_Model\",\"Transform\":{\"posX\":17.9999466,\"posY\":1.44404793,\"posZ\":-42.0000038,\"rotX\":0.016910037,\"rotY\":179.983444,\"rotZ\":0.07986176,\"scaleX\":1.15000069,\"scaleY\":1.14999986,\"scaleZ\":1.15000081},\"GMNotes\":\"\",\"AltLookAngle\":{\"x\":0,\"y\":0,\"z\":0},\"ColorDiffuse\":{\"r\":0,\"g\":0,\"b\":0},\"LayoutGroupSortIndex\":0,\"Value\":0,\"Locked\":false,\"Grid\":true,\"Snap\":true,\"IgnoreFoW\":false,\"MeasureMovement\":false,\"DragSelectable\":true,\"Autoraise\":true,\"Sticky\":true,\"Tooltip\":true,\"GridProjection\":false,\"HideWhenFaceDown\":false,\"Hands\":false,\"CustomMesh\":{\"MeshURL\":\"http://cloud-3.steamusercontent.com/ugc/1043093675415152314/451C26E9D83EBD0824319BD5A30A074B137DCBCB/\",\"DiffuseURL\":\"\",\"NormalURL\":\"\",\"ColliderURL\":\"http://cloud-3.steamusercontent.com/ugc/1043093675414904296/F32B51596FCB671911B5C036B7BD54A6EBC9329B/\",\"Convex\":true,\"MaterialIndex\":3,\"TypeIndex\":1,\"CustomShader\":{\"SpecularColor\":{\"r\":1,\"g\":1,\"b\":1},\"SpecularIntensity\":0,\"SpecularSharpness\":2,\"FresnelStrength\":0},\"CastShadows\":true},\"ChildObjects\":[{\"GUID\":\"5871e8\",\"Name\":\"Custom_Model\",\"Transform\":{\"posX\":-0.03142356,\"posY\":0.0183761828,\"posZ\":-0.0186857954,\"rotX\":0.211798266,\"rotY\":194.993668,\"rotZ\":0.118544728,\"scaleX\":1.34782648,\"scaleY\":1.34782624,\"scaleZ\":1.34782541},\"Nickname\":\"\",\"Description\":\"\",\"GMNotes\":\"\",\"AltLookAngle\":{\"x\":0,\"y\":0,\"z\":0},\"ColorDiffuse\":{\"r\":1,\"g\":1,\"b\":1},\"LayoutGroupSortIndex\":0,\"Value\":0,\"Locked\":true,\"Grid\":true,\"Snap\":true,\"IgnoreFoW\":false,\"MeasureMovement\":false,\"DragSelectable\":true,\"Autoraise\":true,\"Sticky\":true,\"Tooltip\":true,\"GridProjection\":false,\"HideWhenFaceDown\":false,\"Hands\":false,\"CustomMesh\":{\"MeshURL\":\"http://cloud-3.steamusercontent.com/ugc/2012581497133013320/66539972002691AA55773E850A875EF1BEC70B4C/\",\"DiffuseURL\":\"http://cloud-3.steamusercontent.com/ugc/2012581497135013354/3F1BC7E71C2258E6B768647E7F6B1FE1E2326A6E/\",\"NormalURL\":\"\",\"ColliderURL\":\"http://cloud-3.steamusercontent.com/ugc/2027216378721116196/8151689FED1EB0F4E55F555B04D48673FA6A3B59/\",\"Convex\":true,\"MaterialIndex\":3,\"TypeIndex\":1,\"CustomShader\":{\"SpecularColor\":{\"r\":1,\"g\":1,\"b\":1},\"SpecularIntensity\":0,\"SpecularSharpness\":2,\"FresnelStrength\":0},\"CastShadows\":true},\"LuaScript\":\"\",\"LuaScriptState\":\"\",\"XmlUI\":\"\"}]}"
-        },
         "stats": {
           "Ld": {
             "value": 7
           },
           "M": {
-            "value": 6
+            "value": 7
           },
           "OC": {
             "value": 1
@@ -12340,7 +13135,7 @@
             "value": 6
           },
           "T": {
-            "value": 3
+            "value": 4
           },
           "W": {
             "value": 1
@@ -12422,6 +13217,90 @@
           }
         }
       },
+      "Model§Karagar's Rampagers-Jakhal": {
+        "aspects": {
+          "Label": "Jakhal"
+        },
+        "meta": {
+          "ttsModelCode": "{\"Name\":\"Custom_Model\",\"Transform\":{\"posX\":17.9999466,\"posY\":1.44404793,\"posZ\":-42.0000038,\"rotX\":0.016910037,\"rotY\":179.983444,\"rotZ\":0.07986176,\"scaleX\":1.15000069,\"scaleY\":1.14999986,\"scaleZ\":1.15000081},\"GMNotes\":\"\",\"AltLookAngle\":{\"x\":0,\"y\":0,\"z\":0},\"ColorDiffuse\":{\"r\":0,\"g\":0,\"b\":0},\"LayoutGroupSortIndex\":0,\"Value\":0,\"Locked\":false,\"Grid\":true,\"Snap\":true,\"IgnoreFoW\":false,\"MeasureMovement\":false,\"DragSelectable\":true,\"Autoraise\":true,\"Sticky\":true,\"Tooltip\":true,\"GridProjection\":false,\"HideWhenFaceDown\":false,\"Hands\":false,\"CustomMesh\":{\"MeshURL\":\"http://cloud-3.steamusercontent.com/ugc/1043093675415152314/451C26E9D83EBD0824319BD5A30A074B137DCBCB/\",\"DiffuseURL\":\"\",\"NormalURL\":\"\",\"ColliderURL\":\"http://cloud-3.steamusercontent.com/ugc/1043093675414904296/F32B51596FCB671911B5C036B7BD54A6EBC9329B/\",\"Convex\":true,\"MaterialIndex\":3,\"TypeIndex\":1,\"CustomShader\":{\"SpecularColor\":{\"r\":1,\"g\":1,\"b\":1},\"SpecularIntensity\":0,\"SpecularSharpness\":2,\"FresnelStrength\":0},\"CastShadows\":true},\"ChildObjects\":[{\"GUID\":\"5871e8\",\"Name\":\"Custom_Model\",\"Transform\":{\"posX\":-0.03142356,\"posY\":0.0183761828,\"posZ\":-0.0186857954,\"rotX\":0.211798266,\"rotY\":194.993668,\"rotZ\":0.118544728,\"scaleX\":1.34782648,\"scaleY\":1.34782624,\"scaleZ\":1.34782541},\"Nickname\":\"\",\"Description\":\"\",\"GMNotes\":\"\",\"AltLookAngle\":{\"x\":0,\"y\":0,\"z\":0},\"ColorDiffuse\":{\"r\":1,\"g\":1,\"b\":1},\"LayoutGroupSortIndex\":0,\"Value\":0,\"Locked\":true,\"Grid\":true,\"Snap\":true,\"IgnoreFoW\":false,\"MeasureMovement\":false,\"DragSelectable\":true,\"Autoraise\":true,\"Sticky\":true,\"Tooltip\":true,\"GridProjection\":false,\"HideWhenFaceDown\":false,\"Hands\":false,\"CustomMesh\":{\"MeshURL\":\"http://cloud-3.steamusercontent.com/ugc/2012581497133013320/66539972002691AA55773E850A875EF1BEC70B4C/\",\"DiffuseURL\":\"http://cloud-3.steamusercontent.com/ugc/2012581497135013354/3F1BC7E71C2258E6B768647E7F6B1FE1E2326A6E/\",\"NormalURL\":\"\",\"ColliderURL\":\"http://cloud-3.steamusercontent.com/ugc/2027216378721116196/8151689FED1EB0F4E55F555B04D48673FA6A3B59/\",\"Convex\":true,\"MaterialIndex\":3,\"TypeIndex\":1,\"CustomShader\":{\"SpecularColor\":{\"r\":1,\"g\":1,\"b\":1},\"SpecularIntensity\":0,\"SpecularSharpness\":2,\"FresnelStrength\":0},\"CastShadows\":true},\"LuaScript\":\"\",\"LuaScriptState\":\"\",\"XmlUI\":\"\"}]}"
+        },
+        "stats": {
+          "Ld": {
+            "value": 7
+          },
+          "M": {
+            "value": 6
+          },
+          "OC": {
+            "value": 1
+          },
+          "Sv": {
+            "value": 6
+          },
+          "T": {
+            "value": 3
+          },
+          "W": {
+            "value": 1
+          }
+        }
+      },
+      "Model§Karagar's Rampagers-Khorne Berzerker": {
+        "aspects": {
+          "Label": "Khorne Berzerker"
+        },
+        "meta": {
+          "ttsModelCode": "{\"Name\":\"Custom_Model\",\"Transform\":{\"posX\":15.9999428,\"posY\":1.45007539,\"posZ\":-30.9999962,\"rotX\":0.016892178,\"rotY\":179.999786,\"rotZ\":0.07987424,\"scaleX\":1,\"scaleY\":1,\"scaleZ\":1},\"GMNotes\":\"\",\"AltLookAngle\":{\"x\":0,\"y\":0,\"z\":0},\"ColorDiffuse\":{\"r\":0,\"g\":0,\"b\":0},\"LayoutGroupSortIndex\":0,\"Value\":0,\"Locked\":false,\"Grid\":true,\"Snap\":true,\"IgnoreFoW\":false,\"MeasureMovement\":true,\"DragSelectable\":true,\"Autoraise\":true,\"Sticky\":true,\"Tooltip\":true,\"GridProjection\":false,\"HideWhenFaceDown\":false,\"Hands\":false,\"CustomMesh\":{\"MeshURL\":\"http://cloud-3.steamusercontent.com/ugc/1750180373835500024/860E82C9E02DBB67AA510CB8DBBF19EC29DE1D58/\",\"DiffuseURL\":\"\",\"NormalURL\":\"\",\"ColliderURL\":\"http://cloud-3.steamusercontent.com/ugc/1750180373835500024/860E82C9E02DBB67AA510CB8DBBF19EC29DE1D58/\",\"Convex\":true,\"MaterialIndex\":3,\"TypeIndex\":1,\"CustomShader\":{\"SpecularColor\":{\"r\":1,\"g\":1,\"b\":1},\"SpecularIntensity\":0,\"SpecularSharpness\":2,\"FresnelStrength\":0},\"CastShadows\":true},\"ChildObjects\":[{\"GUID\":\"57edf7\",\"Name\":\"Custom_Model\",\"Transform\":{\"posX\":0,\"posY\":0.13,\"posZ\":0,\"rotX\":0,\"rotY\":0,\"rotZ\":0,\"scaleX\":1,\"scaleY\":1,\"scaleZ\":1},\"Nickname\":\"khorne berzerker low-quality photoscan 2023-02-07\",\"Description\":\"\",\"GMNotes\":\"\",\"AltLookAngle\":{\"x\":0,\"y\":0,\"z\":0},\"ColorDiffuse\":{\"r\":1,\"g\":1,\"b\":1},\"LayoutGroupSortIndex\":0,\"Value\":0,\"Locked\":true,\"Grid\":true,\"Snap\":false,\"IgnoreFoW\":false,\"MeasureMovement\":true,\"DragSelectable\":true,\"Autoraise\":true,\"Sticky\":false,\"Tooltip\":true,\"GridProjection\":false,\"HideWhenFaceDown\":false,\"Hands\":false,\"CustomMesh\":{\"MeshURL\":\"http://cloud-3.steamusercontent.com/ugc/2049736825946437210/199F1A9BFADE8FC67EB9063D4E642549482E1CFB/\",\"DiffuseURL\":\"http://cloud-3.steamusercontent.com/ugc/2049736825946438680/031C887C821BA65999D2A98F8E9084815B6BF089/\",\"NormalURL\":\"\",\"ColliderURL\":\"http://cloud-3.steamusercontent.com/ugc/1750180373835528071/337710D75B8C8EF24710E08C2BA869A2D916C8A6/\",\"Convex\":true,\"MaterialIndex\":3,\"TypeIndex\":1,\"CustomShader\":{\"SpecularColor\":{\"r\":1,\"g\":1,\"b\":1},\"SpecularIntensity\":0,\"SpecularSharpness\":2,\"FresnelStrength\":0},\"CastShadows\":true},\"LuaScript\":\"\",\"LuaScriptState\":\"\",\"XmlUI\":\"\"}]}"
+        },
+        "stats": {
+          "Ld": {
+            "value": 6
+          },
+          "M": {
+            "value": 6
+          },
+          "OC": {
+            "value": 2
+          },
+          "Sv": {
+            "value": 3
+          },
+          "T": {
+            "value": 4
+          },
+          "W": {
+            "value": 2
+          }
+        }
+      },
+      "Model§Karagar's Rampagers-Khorne Berzerker Champion": {
+        "aspects": {
+          "Label": "Khorne Berzerker Champion"
+        },
+        "meta": {
+          "ttsModelCode": "{\"Name\":\"Custom_Model\",\"Transform\":{\"posX\":21.9999561,\"posY\":1.44112158,\"posZ\":-32.9999962,\"rotX\":0.0168865249,\"rotY\":179.999588,\"rotZ\":0.0798714161,\"scaleX\":1,\"scaleY\":1,\"scaleZ\":1},\"GMNotes\":\"\",\"AltLookAngle\":{\"x\":0,\"y\":0,\"z\":0},\"ColorDiffuse\":{\"r\":0,\"g\":0,\"b\":0},\"LayoutGroupSortIndex\":0,\"Value\":0,\"Locked\":false,\"Grid\":true,\"Snap\":true,\"IgnoreFoW\":false,\"MeasureMovement\":true,\"DragSelectable\":true,\"Autoraise\":true,\"Sticky\":true,\"Tooltip\":true,\"GridProjection\":false,\"HideWhenFaceDown\":false,\"Hands\":false,\"CustomMesh\":{\"MeshURL\":\"http://cloud-3.steamusercontent.com/ugc/1750180373835500024/860E82C9E02DBB67AA510CB8DBBF19EC29DE1D58/\",\"DiffuseURL\":\"\",\"NormalURL\":\"\",\"ColliderURL\":\"http://cloud-3.steamusercontent.com/ugc/1750180373835500024/860E82C9E02DBB67AA510CB8DBBF19EC29DE1D58/\",\"Convex\":true,\"MaterialIndex\":3,\"TypeIndex\":1,\"CustomShader\":{\"SpecularColor\":{\"r\":1,\"g\":1,\"b\":1},\"SpecularIntensity\":0,\"SpecularSharpness\":2,\"FresnelStrength\":0},\"CastShadows\":true},\"ChildObjects\":[{\"GUID\":\"75c8e0\",\"Name\":\"Custom_Model\",\"Transform\":{\"posX\":0,\"posY\":0.13,\"posZ\":0,\"rotX\":0,\"rotY\":24.9999962,\"rotZ\":0,\"scaleX\":1,\"scaleY\":1,\"scaleZ\":1},\"Nickname\":\"khorne berzerker champ with plasma pistol via MoonkeyMod photoscan 2023-02-08\",\"Description\":\"\",\"GMNotes\":\"\",\"AltLookAngle\":{\"x\":0,\"y\":0,\"z\":0},\"ColorDiffuse\":{\"r\":1,\"g\":1,\"b\":1},\"LayoutGroupSortIndex\":0,\"Value\":0,\"Locked\":true,\"Grid\":true,\"Snap\":false,\"IgnoreFoW\":false,\"MeasureMovement\":true,\"DragSelectable\":true,\"Autoraise\":true,\"Sticky\":false,\"Tooltip\":true,\"GridProjection\":false,\"HideWhenFaceDown\":false,\"Hands\":false,\"CustomMesh\":{\"MeshURL\":\"http://cloud-3.steamusercontent.com/ugc/2049736825949088779/3633BD18229825BC5BB706BF509A36FE0EA98155/\",\"DiffuseURL\":\"http://cloud-3.steamusercontent.com/ugc/2049736825949087699/E67B6392E692788564C68210160FCF47E782A8CE/\",\"NormalURL\":\"\",\"ColliderURL\":\"http://cloud-3.steamusercontent.com/ugc/1750180373835528071/337710D75B8C8EF24710E08C2BA869A2D916C8A6/\",\"Convex\":true,\"MaterialIndex\":3,\"TypeIndex\":1,\"CustomShader\":{\"SpecularColor\":{\"r\":1,\"g\":1,\"b\":1},\"SpecularIntensity\":0,\"SpecularSharpness\":2,\"FresnelStrength\":0},\"CastShadows\":true},\"LuaScript\":\"\",\"LuaScriptState\":\"\",\"XmlUI\":\"\"}]}"
+        },
+        "stats": {
+          "Ld": {
+            "value": 6
+          },
+          "M": {
+            "value": 6
+          },
+          "OC": {
+            "value": 2
+          },
+          "Sv": {
+            "value": 3
+          },
+          "T": {
+            "value": 4
+          },
+          "W": {
+            "value": 2
+          }
+        }
+      },
       "Model§Karsk": {
         "meta": {
           "ttsModelCode": "{\"Name\":\"Custom_Model\",\"Transform\":{\"posX\":-53.5000534,\"posY\":1.568609,\"posZ\":42.5000153,\"rotX\":359.983124,\"rotY\":359.984222,\"rotZ\":359.920044,\"scaleX\":1,\"scaleY\":1,\"scaleZ\":1},\"GMNotes\":\"\",\"AltLookAngle\":{\"x\":0,\"y\":0,\"z\":0},\"ColorDiffuse\":{\"r\":0,\"g\":0,\"b\":0},\"LayoutGroupSortIndex\":0,\"Value\":0,\"Locked\":false,\"Grid\":true,\"Snap\":true,\"IgnoreFoW\":false,\"MeasureMovement\":false,\"DragSelectable\":true,\"Autoraise\":true,\"Sticky\":true,\"Tooltip\":true,\"GridProjection\":false,\"HideWhenFaceDown\":false,\"Hands\":false,\"CustomMesh\":{\"MeshURL\":\"http://cloud-3.steamusercontent.com/ugc/1043093675415152314/451C26E9D83EBD0824319BD5A30A074B137DCBCB/\",\"DiffuseURL\":\"\",\"NormalURL\":\"\",\"ColliderURL\":\"http://cloud-3.steamusercontent.com/ugc/1043093675414904296/F32B51596FCB671911B5C036B7BD54A6EBC9329B/\",\"Convex\":true,\"MaterialIndex\":1,\"TypeIndex\":1,\"CustomShader\":{\"SpecularColor\":{\"r\":0.875,\"g\":0.812880337,\"b\":0.7463235},\"SpecularIntensity\":0.05,\"SpecularSharpness\":2,\"FresnelStrength\":0.107142858},\"CastShadows\":true},\"ChildObjects\":[{\"GUID\":\"34a98e\",\"Name\":\"Custom_Model\",\"Transform\":{\"posX\":-0.00000312986458,\"posY\":0.127390385,\"posZ\":-6.031318e-8,\"rotX\":0.0005581921,\"rotY\":225.062958,\"rotZ\":-0.000239594563,\"scaleX\":0.9999999,\"scaleY\":1,\"scaleZ\":0.9999999},\"Nickname\":\"command man 22\",\"Description\":\"by ZenphyL\",\"GMNotes\":\"\",\"AltLookAngle\":{\"x\":0,\"y\":0,\"z\":0},\"ColorDiffuse\":{\"r\":1,\"g\":1,\"b\":1},\"LayoutGroupSortIndex\":0,\"Value\":0,\"Locked\":false,\"Grid\":true,\"Snap\":true,\"IgnoreFoW\":false,\"MeasureMovement\":false,\"DragSelectable\":true,\"Autoraise\":true,\"Sticky\":true,\"Tooltip\":true,\"GridProjection\":false,\"HideWhenFaceDown\":false,\"Hands\":false,\"CustomMesh\":{\"MeshURL\":\"http://cloud-3.steamusercontent.com/ugc/1943895497943179078/1A7F7C83D487B8F2D468B5CAD359D4868F60151E/\",\"DiffuseURL\":\"http://cloud-3.steamusercontent.com/ugc/1943895497943179316/B9A977184930C56E5CF0F23250A519780E6B943E/\",\"NormalURL\":\"\",\"ColliderURL\":\"http://cloud-3.steamusercontent.com/ugc/1043093675414904296/F32B51596FCB671911B5C036B7BD54A6EBC9329B/\",\"Convex\":true,\"MaterialIndex\":3,\"TypeIndex\":1,\"CustomShader\":{\"SpecularColor\":{\"r\":1,\"g\":1,\"b\":1},\"SpecularIntensity\":0,\"SpecularSharpness\":2,\"FresnelStrength\":0},\"CastShadows\":true},\"LuaScript\":\"\",\"LuaScriptState\":\"\",\"XmlUI\":\"\"}]}"
@@ -12473,15 +13352,15 @@
         }
       },
       "Model§Khorne Berzerker": {
-        "meta": {
-          "ttsModelCode": "{\"Name\":\"Custom_Model\",\"Transform\":{\"posX\":15.9999428,\"posY\":1.45007539,\"posZ\":-30.9999962,\"rotX\":0.016892178,\"rotY\":179.999786,\"rotZ\":0.07987424,\"scaleX\":1,\"scaleY\":1,\"scaleZ\":1},\"GMNotes\":\"\",\"AltLookAngle\":{\"x\":0,\"y\":0,\"z\":0},\"ColorDiffuse\":{\"r\":0,\"g\":0,\"b\":0},\"LayoutGroupSortIndex\":0,\"Value\":0,\"Locked\":false,\"Grid\":true,\"Snap\":true,\"IgnoreFoW\":false,\"MeasureMovement\":true,\"DragSelectable\":true,\"Autoraise\":true,\"Sticky\":true,\"Tooltip\":true,\"GridProjection\":false,\"HideWhenFaceDown\":false,\"Hands\":false,\"CustomMesh\":{\"MeshURL\":\"http://cloud-3.steamusercontent.com/ugc/1750180373835500024/860E82C9E02DBB67AA510CB8DBBF19EC29DE1D58/\",\"DiffuseURL\":\"\",\"NormalURL\":\"\",\"ColliderURL\":\"http://cloud-3.steamusercontent.com/ugc/1750180373835500024/860E82C9E02DBB67AA510CB8DBBF19EC29DE1D58/\",\"Convex\":true,\"MaterialIndex\":3,\"TypeIndex\":1,\"CustomShader\":{\"SpecularColor\":{\"r\":1,\"g\":1,\"b\":1},\"SpecularIntensity\":0,\"SpecularSharpness\":2,\"FresnelStrength\":0},\"CastShadows\":true},\"ChildObjects\":[{\"GUID\":\"57edf7\",\"Name\":\"Custom_Model\",\"Transform\":{\"posX\":0,\"posY\":0.13,\"posZ\":0,\"rotX\":0,\"rotY\":0,\"rotZ\":0,\"scaleX\":1,\"scaleY\":1,\"scaleZ\":1},\"Nickname\":\"khorne berzerker low-quality photoscan 2023-02-07\",\"Description\":\"\",\"GMNotes\":\"\",\"AltLookAngle\":{\"x\":0,\"y\":0,\"z\":0},\"ColorDiffuse\":{\"r\":1,\"g\":1,\"b\":1},\"LayoutGroupSortIndex\":0,\"Value\":0,\"Locked\":true,\"Grid\":true,\"Snap\":false,\"IgnoreFoW\":false,\"MeasureMovement\":true,\"DragSelectable\":true,\"Autoraise\":true,\"Sticky\":false,\"Tooltip\":true,\"GridProjection\":false,\"HideWhenFaceDown\":false,\"Hands\":false,\"CustomMesh\":{\"MeshURL\":\"http://cloud-3.steamusercontent.com/ugc/2049736825946437210/199F1A9BFADE8FC67EB9063D4E642549482E1CFB/\",\"DiffuseURL\":\"http://cloud-3.steamusercontent.com/ugc/2049736825946438680/031C887C821BA65999D2A98F8E9084815B6BF089/\",\"NormalURL\":\"\",\"ColliderURL\":\"http://cloud-3.steamusercontent.com/ugc/1750180373835528071/337710D75B8C8EF24710E08C2BA869A2D916C8A6/\",\"Convex\":true,\"MaterialIndex\":3,\"TypeIndex\":1,\"CustomShader\":{\"SpecularColor\":{\"r\":1,\"g\":1,\"b\":1},\"SpecularIntensity\":0,\"SpecularSharpness\":2,\"FresnelStrength\":0},\"CastShadows\":true},\"LuaScript\":\"\",\"LuaScriptState\":\"\",\"XmlUI\":\"\"}]}"
+        "assets": {
+          "traits": []
         },
         "stats": {
           "Ld": {
             "value": 6
           },
           "M": {
-            "value": 6
+            "value": 8
           },
           "OC": {
             "value": 2
@@ -12498,15 +13377,15 @@
         }
       },
       "Model§Khorne Berzerker Champion": {
-        "meta": {
-          "ttsModelCode": "{\"Name\":\"Custom_Model\",\"Transform\":{\"posX\":21.9999561,\"posY\":1.44112158,\"posZ\":-32.9999962,\"rotX\":0.0168865249,\"rotY\":179.999588,\"rotZ\":0.0798714161,\"scaleX\":1,\"scaleY\":1,\"scaleZ\":1},\"GMNotes\":\"\",\"AltLookAngle\":{\"x\":0,\"y\":0,\"z\":0},\"ColorDiffuse\":{\"r\":0,\"g\":0,\"b\":0},\"LayoutGroupSortIndex\":0,\"Value\":0,\"Locked\":false,\"Grid\":true,\"Snap\":true,\"IgnoreFoW\":false,\"MeasureMovement\":true,\"DragSelectable\":true,\"Autoraise\":true,\"Sticky\":true,\"Tooltip\":true,\"GridProjection\":false,\"HideWhenFaceDown\":false,\"Hands\":false,\"CustomMesh\":{\"MeshURL\":\"http://cloud-3.steamusercontent.com/ugc/1750180373835500024/860E82C9E02DBB67AA510CB8DBBF19EC29DE1D58/\",\"DiffuseURL\":\"\",\"NormalURL\":\"\",\"ColliderURL\":\"http://cloud-3.steamusercontent.com/ugc/1750180373835500024/860E82C9E02DBB67AA510CB8DBBF19EC29DE1D58/\",\"Convex\":true,\"MaterialIndex\":3,\"TypeIndex\":1,\"CustomShader\":{\"SpecularColor\":{\"r\":1,\"g\":1,\"b\":1},\"SpecularIntensity\":0,\"SpecularSharpness\":2,\"FresnelStrength\":0},\"CastShadows\":true},\"ChildObjects\":[{\"GUID\":\"75c8e0\",\"Name\":\"Custom_Model\",\"Transform\":{\"posX\":0,\"posY\":0.13,\"posZ\":0,\"rotX\":0,\"rotY\":24.9999962,\"rotZ\":0,\"scaleX\":1,\"scaleY\":1,\"scaleZ\":1},\"Nickname\":\"khorne berzerker champ with plasma pistol via MoonkeyMod photoscan 2023-02-08\",\"Description\":\"\",\"GMNotes\":\"\",\"AltLookAngle\":{\"x\":0,\"y\":0,\"z\":0},\"ColorDiffuse\":{\"r\":1,\"g\":1,\"b\":1},\"LayoutGroupSortIndex\":0,\"Value\":0,\"Locked\":true,\"Grid\":true,\"Snap\":false,\"IgnoreFoW\":false,\"MeasureMovement\":true,\"DragSelectable\":true,\"Autoraise\":true,\"Sticky\":false,\"Tooltip\":true,\"GridProjection\":false,\"HideWhenFaceDown\":false,\"Hands\":false,\"CustomMesh\":{\"MeshURL\":\"http://cloud-3.steamusercontent.com/ugc/2049736825949088779/3633BD18229825BC5BB706BF509A36FE0EA98155/\",\"DiffuseURL\":\"http://cloud-3.steamusercontent.com/ugc/2049736825949087699/E67B6392E692788564C68210160FCF47E782A8CE/\",\"NormalURL\":\"\",\"ColliderURL\":\"http://cloud-3.steamusercontent.com/ugc/1750180373835528071/337710D75B8C8EF24710E08C2BA869A2D916C8A6/\",\"Convex\":true,\"MaterialIndex\":3,\"TypeIndex\":1,\"CustomShader\":{\"SpecularColor\":{\"r\":1,\"g\":1,\"b\":1},\"SpecularIntensity\":0,\"SpecularSharpness\":2,\"FresnelStrength\":0},\"CastShadows\":true},\"LuaScript\":\"\",\"LuaScriptState\":\"\",\"XmlUI\":\"\"}]}"
+        "assets": {
+          "traits": []
         },
         "stats": {
           "Ld": {
             "value": 6
           },
           "M": {
-            "value": 6
+            "value": 8
           },
           "OC": {
             "value": 2
@@ -13024,6 +13903,31 @@
           },
           "W": {
             "value": 1
+          }
+        }
+      },
+      "Model§Rubric Marine": {
+        "meta": {
+          "ttsModelCode": null
+        },
+        "stats": {
+          "Ld": {
+            "value": 7
+          },
+          "M": {
+            "value": 6
+          },
+          "OC": {
+            "value": 2
+          },
+          "Sv": {
+            "value": 3
+          },
+          "T": {
+            "value": 4
+          },
+          "W": {
+            "value": 2
           }
         }
       },
@@ -13627,6 +14531,56 @@
           }
         }
       },
+      "Model§The Dishonoured": {
+        "assets": {
+          "traits": []
+        },
+        "stats": {
+          "Ld": {
+            "value": 7
+          },
+          "M": {
+            "value": 7
+          },
+          "OC": {
+            "value": 1
+          },
+          "Sv": {
+            "value": 6
+          },
+          "T": {
+            "value": 4
+          },
+          "W": {
+            "value": 1
+          }
+        }
+      },
+      "Model§The Jakhal Pack Leader": {
+        "assets": {
+          "traits": []
+        },
+        "stats": {
+          "Ld": {
+            "value": 7
+          },
+          "M": {
+            "value": 7
+          },
+          "OC": {
+            "value": 1
+          },
+          "Sv": {
+            "value": 6
+          },
+          "T": {
+            "value": 4
+          },
+          "W": {
+            "value": 1
+          }
+        }
+      },
       "Model§Theyn": {
         "meta": {
           "ttsModelCode": "{\"Name\":\"Custom_Model\",\"Transform\":{\"posX\":21.9999771,\"posY\":1.45113325,\"posZ\":1.0000056,\"rotX\":0.01684236,\"rotY\":180.000076,\"rotZ\":0.07991638,\"scaleX\":1,\"scaleY\":1,\"scaleZ\":1},\"GMNotes\":\"\",\"AltLookAngle\":{\"x\":0,\"y\":0,\"z\":0},\"ColorDiffuse\":{\"r\":0,\"g\":0,\"b\":0},\"LayoutGroupSortIndex\":0,\"Value\":0,\"Locked\":false,\"Grid\":true,\"Snap\":false,\"IgnoreFoW\":false,\"MeasureMovement\":true,\"DragSelectable\":true,\"Autoraise\":true,\"Sticky\":false,\"Tooltip\":true,\"GridProjection\":false,\"HideWhenFaceDown\":false,\"Hands\":false,\"CustomMesh\":{\"MeshURL\":\"http://cloud-3.steamusercontent.com/ugc/1798600640490458387/8DA68E37B5EEAC2988CB4E8B0D1202323D18D277/\",\"DiffuseURL\":\"\",\"NormalURL\":\"\",\"ColliderURL\":\"http://cloud-3.steamusercontent.com/ugc/1798600640490458387/8DA68E37B5EEAC2988CB4E8B0D1202323D18D277/\",\"Convex\":true,\"MaterialIndex\":3,\"TypeIndex\":1,\"CustomShader\":{\"SpecularColor\":{\"r\":1,\"g\":1,\"b\":1},\"SpecularIntensity\":0,\"SpecularSharpness\":2,\"FresnelStrength\":0},\"CastShadows\":true},\"ChildObjects\":[{\"GUID\":\"73a31f\",\"Name\":\"Custom_Model\",\"Transform\":{\"posX\":0,\"posY\":0.13,\"posZ\":0,\"rotX\":0,\"rotY\":0,\"rotZ\":0,\"scaleX\":1,\"scaleY\":1,\"scaleZ\":1},\"Nickname\":\"leagues of votann hearthkyn warrior theyn photoscan 2022-11-02\",\"Description\":\"\",\"GMNotes\":\"\",\"AltLookAngle\":{\"x\":0,\"y\":0,\"z\":0},\"ColorDiffuse\":{\"r\":0.88,\"g\":0.88,\"b\":0.88},\"LayoutGroupSortIndex\":0,\"Value\":0,\"Locked\":true,\"Grid\":true,\"Snap\":true,\"IgnoreFoW\":false,\"MeasureMovement\":false,\"DragSelectable\":true,\"Autoraise\":true,\"Sticky\":true,\"Tooltip\":true,\"GridProjection\":false,\"HideWhenFaceDown\":false,\"Hands\":false,\"CustomMesh\":{\"MeshURL\":\"http://cloud-3.steamusercontent.com/ugc/1912368170567111506/9E824684AFE6101C854F13862B20AAAEF5D9435E/\",\"DiffuseURL\":\"http://cloud-3.steamusercontent.com/ugc/1912368170567110603/7121F87F48200FDAE87EB3FFF1DEAEF40D53F21F/\",\"NormalURL\":\"\",\"ColliderURL\":\"http://cloud-3.steamusercontent.com/ugc/1750180373835528071/337710D75B8C8EF24710E08C2BA869A2D916C8A6/\",\"Convex\":true,\"MaterialIndex\":3,\"TypeIndex\":1,\"CustomShader\":{\"SpecularColor\":{\"r\":1,\"g\":1,\"b\":1},\"SpecularIntensity\":0,\"SpecularSharpness\":2,\"FresnelStrength\":0},\"CastShadows\":true},\"LuaScript\":\"\",\"LuaScriptState\":\"\",\"XmlUI\":\"\"}]}"
@@ -13674,6 +14628,31 @@
           },
           "W": {
             "value": 1
+          }
+        }
+      },
+      "Model§Tzaangor Enlightened": {
+        "meta": {
+          "ttsModelCode": null
+        },
+        "stats": {
+          "Ld": {
+            "value": 7
+          },
+          "M": {
+            "value": 10
+          },
+          "OC": {
+            "value": 2
+          },
+          "Sv": {
+            "value": 5
+          },
+          "T": {
+            "value": 4
+          },
+          "W": {
+            "value": 2
           }
         }
       },
@@ -18127,7 +19106,7 @@
           }
         }
       },
-      "Ranged Weapon§Jakhals—Autopistol": {
+      "Ranged Weapon§Jakals-Autopistol": {
         "aspects": {
           "Label": "Autopistol"
         },
@@ -18135,6 +19114,9 @@
           "traits": [
             "Ability§Pistol"
           ]
+        },
+        "removed": {
+          "stats": {}
         },
         "stats": {
           "A": {
@@ -18154,6 +19136,39 @@
           },
           "S": {
             "value": 3
+          }
+        }
+      },
+      "Ranged Weapon§Kaa'Skrek-Baleful Devolution": {
+        "aspects": {
+          "Label": "Baleful Devolution"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Blast",
+            "Ability§Devastating Wounds",
+            "Ability§Psychic"
+          ]
+        },
+        "stats": {
+          "A": {
+            "statType": "term",
+            "value": "D6"
+          },
+          "AP": {
+            "value": 0
+          },
+          "BS": {
+            "value": 3
+          },
+          "D": {
+            "value": 1
+          },
+          "Range": {
+            "value": 18
+          },
+          "S": {
+            "value": 9
           }
         }
       },
@@ -18424,6 +19439,138 @@
           }
         }
       },
+      "Ranged Weapon§Karagar's Rampagers-Jakhals—Autopistol": {
+        "aspects": {
+          "Label": "Autopistol"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Pistol"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 1
+          },
+          "AP": {
+            "value": 0
+          },
+          "BS": {
+            "value": 4
+          },
+          "D": {
+            "value": 1
+          },
+          "Range": {
+            "value": 12
+          },
+          "S": {
+            "value": 3
+          }
+        }
+      },
+      "Ranged Weapon§Karagar's Rampagers-Khorne Berzerkers—Bolt pistol": {
+        "aspects": {
+          "Label": "Bolt pistol"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Pistol"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 1
+          },
+          "AP": {
+            "value": 0
+          },
+          "BS": {
+            "value": 3
+          },
+          "D": {
+            "value": 1
+          },
+          "Range": {
+            "value": 12
+          },
+          "S": {
+            "value": 4
+          }
+        }
+      },
+      "Ranged Weapon§Karagar's Rampagers-Khorne Berzerkers—Plasma pistol": {
+        "aspects": {
+          "Label": "Plasma pistol"
+        },
+        "assets": {
+          "traits": [
+            "Ranged Weapon§Karagar's Rampagers-Khorne Berzerkers—Plasma pistol – Standard",
+            "Ranged Weapon§Karagar's Rampagers-Khorne Berzerkers—Plasma pistol – Supercharged"
+          ]
+        }
+      },
+      "Ranged Weapon§Karagar's Rampagers-Khorne Berzerkers—Plasma pistol – Standard": {
+        "aspects": {
+          "Label": "Standard"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Pistol"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 1
+          },
+          "AP": {
+            "value": -2
+          },
+          "BS": {
+            "value": 3
+          },
+          "D": {
+            "value": 1
+          },
+          "Range": {
+            "value": 12
+          },
+          "S": {
+            "value": 7
+          }
+        }
+      },
+      "Ranged Weapon§Karagar's Rampagers-Khorne Berzerkers—Plasma pistol – Supercharged": {
+        "aspects": {
+          "Label": "Supercharged"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Pistol",
+            "Ability§Hazardous"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 1
+          },
+          "AP": {
+            "value": -3
+          },
+          "BS": {
+            "value": 3
+          },
+          "D": {
+            "value": 2
+          },
+          "Range": {
+            "value": 12
+          },
+          "S": {
+            "value": 8
+          }
+        }
+      },
       "Ranged Weapon§Kataphron Destroyers—Cognis flamer": {
         "aspects": {
           "Label": "Cognis flamer"
@@ -18601,7 +19748,7 @@
           }
         }
       },
-      "Ranged Weapon§Khorne Berzerkers—Bolt pistol": {
+      "Ranged Weapon§Khorne Berzerkers-Bolt pistol": {
         "aspects": {
           "Label": "Bolt pistol"
         },
@@ -18618,7 +19765,7 @@
             "value": 0
           },
           "BS": {
-            "value": 3
+            "value": 4
           },
           "D": {
             "value": 1
@@ -18631,20 +19778,51 @@
           }
         }
       },
-      "Ranged Weapon§Khorne Berzerkers—Plasma pistol": {
+      "Ranged Weapon§Khorne Berzerkers-Plasm pistol - supercharged": {
+        "aspects": {
+          "Label": "Plasm pistol - supercharged"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Hazardous",
+            "Ability§Pistol"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 1
+          },
+          "AP": {
+            "value": -3
+          },
+          "BS": {
+            "value": 4
+          },
+          "D": {
+            "value": 2
+          },
+          "Range": {
+            "value": 12
+          },
+          "S": {
+            "value": 8
+          }
+        }
+      },
+      "Ranged Weapon§Khorne Berzerkers-Plasma pistol": {
         "aspects": {
           "Label": "Plasma pistol"
         },
         "assets": {
           "traits": [
-            "Ranged Weapon§Khorne Berzerkers—Plasma pistol – Standard",
-            "Ranged Weapon§Khorne Berzerkers—Plasma pistol – Supercharged"
+            "Ranged Weapon§Khorne Berzerkers-Plasma pistol - standard",
+            "Ranged Weapon§Khorne Berzerkers-Plasm pistol - supercharged"
           ]
         }
       },
-      "Ranged Weapon§Khorne Berzerkers—Plasma pistol – Standard": {
+      "Ranged Weapon§Khorne Berzerkers-Plasma pistol - standard": {
         "aspects": {
-          "Label": "Standard"
+          "Label": "Plasma pistol - standard"
         },
         "assets": {
           "traits": [
@@ -18659,7 +19837,7 @@
             "value": -2
           },
           "BS": {
-            "value": 3
+            "value": 4
           },
           "D": {
             "value": 1
@@ -18669,37 +19847,6 @@
           },
           "S": {
             "value": 7
-          }
-        }
-      },
-      "Ranged Weapon§Khorne Berzerkers—Plasma pistol – Supercharged": {
-        "aspects": {
-          "Label": "Supercharged"
-        },
-        "assets": {
-          "traits": [
-            "Ability§Pistol",
-            "Ability§Hazardous"
-          ]
-        },
-        "stats": {
-          "A": {
-            "value": 1
-          },
-          "AP": {
-            "value": -3
-          },
-          "BS": {
-            "value": 3
-          },
-          "D": {
-            "value": 2
-          },
-          "Range": {
-            "value": 12
-          },
-          "S": {
-            "value": 8
           }
         }
       },
@@ -19585,6 +20732,36 @@
           },
           "S": {
             "value": 8
+          }
+        }
+      },
+      "Ranged Weapon§Master of Execution-Bolt pistol": {
+        "aspects": {
+          "Label": "Bolt pistol"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Pistol"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 1
+          },
+          "AP": {
+            "value": 0
+          },
+          "BS": {
+            "value": 3
+          },
+          "D": {
+            "value": 1
+          },
+          "Range": {
+            "value": 12
+          },
+          "S": {
+            "value": 4
           }
         }
       },
@@ -20888,6 +22065,162 @@
           },
           "BS": {
             "value": 3
+          },
+          "D": {
+            "value": 1
+          },
+          "Range": {
+            "value": 12
+          },
+          "S": {
+            "value": 4
+          }
+        }
+      },
+      "Ranged Weapon§Rubric Marines-Inferno bolt pistol": {
+        "aspects": {
+          "Label": "Inferno bolt pistol"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Pistol"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 1
+          },
+          "AP": {
+            "value": -1
+          },
+          "BS": {
+            "value": 3
+          },
+          "D": {
+            "value": 1
+          },
+          "Range": {
+            "value": 12
+          },
+          "S": {
+            "value": 4
+          }
+        }
+      },
+      "Ranged Weapon§Rubric Marines-Inferno boltgun": {
+        "aspects": {
+          "Label": "Inferno boltgun"
+        },
+        "stats": {
+          "A": {
+            "value": 2
+          },
+          "AP": {
+            "value": -2
+          },
+          "BS": {
+            "value": 3
+          },
+          "D": {
+            "value": 1
+          },
+          "Range": {
+            "value": 24
+          },
+          "S": {
+            "value": 4
+          }
+        }
+      },
+      "Ranged Weapon§Rubric Marines-Malefic Curse": {
+        "aspects": {
+          "Label": "Malefic Curse"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Devastating Wounds",
+            "Ability§Psychic",
+            {
+              "item": "Ability§Anti-",
+              "stats": {
+                "keyword": {
+                  "value": "Infantry"
+                },
+                "x": {
+                  "value": "4+"
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 3
+          },
+          "AP": {
+            "value": -3
+          },
+          "BS": {
+            "value": 3
+          },
+          "D": {
+            "value": 1
+          },
+          "Range": {
+            "value": 24
+          },
+          "S": {
+            "value": 4
+          }
+        }
+      },
+      "Ranged Weapon§Rubric Marines-Soulreaper cannon": {
+        "aspects": {
+          "Label": "Soulreaper cannon"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Devastating Wounds"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 6
+          },
+          "AP": {
+            "value": -2
+          },
+          "BS": {
+            "value": 3
+          },
+          "D": {
+            "value": 1
+          },
+          "Range": {
+            "value": 24
+          },
+          "S": {
+            "value": 6
+          }
+        }
+      },
+      "Ranged Weapon§Rubric Marines-Warpflamer": {
+        "aspects": {
+          "Label": "Warpflamer"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Ignores Cover",
+            "Ability§Torrent"
+          ]
+        },
+        "stats": {
+          "A": {
+            "statType": "term",
+            "value": "D6"
+          },
+          "AP": {
+            "value": -1
           },
           "D": {
             "value": 1
@@ -22293,6 +23626,40 @@
           }
         }
       },
+      "Ranged Weapon§Vorrakh-Infernal cannon": {
+        "assets": {
+          "traits": [
+            {
+              "item": "Ability§Rapid Fire",
+              "stats": {
+                "x": {
+                  "value": "1"
+                }
+              }
+            }
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": 3
+          },
+          "AP": {
+            "value": -1
+          },
+          "BS": {
+            "value": 3
+          },
+          "D": {
+            "value": 2
+          },
+          "Range": {
+            "value": 24
+          },
+          "S": {
+            "value": 5
+          }
+        }
+      },
       "Ranged Weapon§Warboss Gordrang—Big shoota": {
         "aspects": {
           "Label": "Big shoota"
@@ -22442,6 +23809,31 @@
           }
         }
       },
+      "Ranged Weapon§Zadophon the Soul Eater-Infernal Cannon": {
+        "aspects": {
+          "Label": "Infernal Cannon"
+        },
+        "stats": {
+          "A": {
+            "value": 3
+          },
+          "AP": {
+            "value": -2
+          },
+          "BS": {
+            "value": 2
+          },
+          "D": {
+            "value": 2
+          },
+          "Range": {
+            "value": 24
+          },
+          "S": {
+            "value": 5
+          }
+        }
+      },
       "Roster§Roster": {
         "aspects": {
           "Label": "Patrol"
@@ -22514,6 +23906,32 @@
                   ]
                 ],
                 "value": "The Coven Temporus"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Combat Patrol",
+                    "ranks"
+                  ]
+                ],
+                "value": "Prism of Zadophon"
+              },
+              {
+                "actionType": "remove",
+                "iterations": 1,
+                "paths": [
+                  [
+                    "{self}",
+                    "stats",
+                    "Combat Patrol",
+                    "ranks"
+                  ]
+                ],
+                "value": "Frenzied Reavers"
               },
               {
                 "actionType": "remove",
@@ -23669,6 +25087,40 @@
                     "trait": "Unit§Insidious Invaders—Von Ryan’s Leapers"
                   }
                 ]
+              },
+              "Prism of Zadophon": {
+                "order": 33,
+                "traits": [
+                  {
+                    "trait": "Character§Prism of Zadophon-Zadophon the Soul Eater"
+                  },
+                  {
+                    "trait": "Unit§Prism of Zadophon-Rubric Marines"
+                  },
+                  {
+                    "trait": "Character§Prism of Zadophon-Kaa'Skrek"
+                  },
+                  {
+                    "trait": "Unit§Prism of Zadophon-Tzaangor Enlightened"
+                  }
+                ]
+              },
+              "Frenzied Reavers": {
+                "order": 34,
+                "traits": [
+                  {
+                    "trait": "Character§Frenzied Reavers-Vorrakh"
+                  },
+                  {
+                    "trait": "Character§Frenzied Reavers-Master of Executions"
+                  },
+                  {
+                    "trait": "Unit§Frenzied Reavers-Khorne Berzerkers"
+                  },
+                  {
+                    "trait": "Unit§Frenzied Reavers-Jakhals"
+                  }
+                ]
               }
             },
             "statOrder": 6,
@@ -23681,6 +25133,9 @@
           },
           "Faction": {
             "visibility": "hidden"
+          },
+          "Faction Group": {
+            "value": "-"
           },
           "Legends": {
             "visibility": "hidden"
@@ -23777,6 +25232,24 @@
         },
         "text": "WHEN: Start of your opponent’s Command phase.\n\nTARGET: One Officer model from your army.\n\nEFFECT: Until the end of the turn, halve the Move characteristic of enemy models, halve Advance rolls made for enemy units, enemy units cannot declare a charge and each time an enemy model makes a ranged attack, subtract 1 from the Hit roll.\n\nRESTRICTIONS: You can only use this Stratagem once per battle."
       },
+      "Stratagem§Berserk Resilience": {
+        "keywords": {
+          "Category": [
+            "Battle Tactic"
+          ],
+          "Turn": [
+            "Yours"
+          ],
+          "Phase": [
+            "Fight"
+          ],
+          "Keywords": [
+            "Frenzied Reavers",
+            "World Eaters"
+          ]
+        },
+        "text": "When: Fight phase, just after an enemy unit\nhas selected its targets\n\nTarget: One WORLD EATERS CHARACTER\nunit from your army that was selected as the\ntarget of one or more of the attacking unit's\nattacks.\n\nEffect: Until the end of the phase, each time a\nmodel in your unit is destroyed, if that model\nhas not fought this phase, roll one D6, adding\n2 if the Total Carnage Blessing of Khorne is\nactive for your army. On a 4+, do not remove\nthe destroyed model from play; it can fight\nafter the attacking unit has finished making\nits attacks, and is then removed from play."
+      },
       "Stratagem§Bestial Bellow": {
         "keywords": {
           "Turn": [
@@ -23833,6 +25306,25 @@
           ]
         },
         "text": "WHEN: Fight phase, just after an enemy unit has selected its targets.\n\nTARGET: One Bloodletters unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\n\nEFFECT: Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking model’s unit has finished making its attacks, and is then removed from play."
+      },
+      "Stratagem§Bloodlust": {
+        "keywords": {
+          "Keywords": [
+            "Frenzied Reavers",
+            "World Eaters"
+          ],
+          "Category": [
+            "Strategic Ploy"
+          ],
+          "Turn": [
+            "Opponent’s",
+            "Yours"
+          ],
+          "Phase": [
+            "Shooting"
+          ]
+        },
+        "text": "When: Your opponent's Shooting phase, just\nafter an enemy unit has shot.\n\nTarget: One JAKHALS unit from your army\nthat had one or more of its models destroyed\nby the attacking unit's attacks.\n\nEffect: Your unit can make a Normal move of\nup to D6\"."
       },
       "Stratagem§Bring It Down": {
         "keywords": {
@@ -23907,6 +25399,24 @@
           ]
         },
         "text": "WHEN: Your Shooting phase or the Fight phase.\n\nTARGET: One Death Guard unit from your army that has not been selected to shoot or fight this phase.\n\nEFFECT: Until the end of the phase, each time a model in your unit makes an attack, improve the Armour Penetration characteristic of that attack by 1."
+      },
+      "Stratagem§Curse of Foretold": {
+        "keywords": {
+          "Keywords": [
+            "Prism of Zadophon",
+            "Thousand Sons"
+          ],
+          "Category": [
+            "Battle Tactic"
+          ],
+          "Turn": [
+            "Yours"
+          ],
+          "Phase": [
+            "Shooting"
+          ]
+        },
+        "text": "When: Your Shooting phase.\n\nTarget: One RUBRIC MARINES unit from your\narmy that has not been selected to shoot this\nphase.\n\nEffect: Until the end of the phase, the Malefic\nCurse weapon equipped by your unit's\nAspiring Sorcerer model has the [PISTOL]\nability and each time that model makes an\nattack with that weapon, add 1 to the Hit roll."
       },
       "Stratagem§Daemonic Fervour": {
         "keywords": {
@@ -24328,6 +25838,24 @@
         },
         "text": "WHEN: Your Shooting phase or the Fight phase.\n\nTARGET: One Adepta Sororitas Infantry unit from your army that has not been selected to shoot or fight this phase.\n\nEFFECT: Until the end of the phase, weapons equipped by models in your unit have the [LETHAL HITS] ability."
       },
+      "Stratagem§Horrifying Butchery": {
+        "keywords": {
+          "Phase": [
+            "Fight"
+          ],
+          "Turn": [
+            "Yours"
+          ],
+          "Category": [
+            "Battle Tactic"
+          ],
+          "Keywords": [
+            "Frenzied Reavers",
+            "World Eaters"
+          ]
+        },
+        "text": "When: Start of the Fight phase.\n\nTarget: One KHORNE BERZERKERS unit from\nyour army.\n\nEffect: Select one enemy unit with in\nEngagement Range of your unit. That enemy\nunit must take a Battle-shock test."
+      },
       "Stratagem§Hyper-reactive": {
         "keywords": {
           "Turn": [
@@ -24590,6 +26118,26 @@
         },
         "text": "WHEN: Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.\n\nTARGET: One Necrons unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\n\nEFFECT: Until the end of the phase, models in your unit have a 5+ invulnerable save."
       },
+      "Stratagem§Mutable Illusion": {
+        "keywords": {
+          "Keywords": [
+            "Prism of Zadophon",
+            "Thousand Sons"
+          ],
+          "Category": [
+            "Strategic Ploy"
+          ],
+          "Turn": [
+            "Opponent’s",
+            "Yours"
+          ],
+          "Phase": [
+            "Fight",
+            "Shooting"
+          ]
+        },
+        "text": "When: Your opponent's Shooting phase or the\nFight phase, just after an enemy unit has\nselected its targets.\n\nTarget: One TZAANGOR SHAMAN or\nTZAANGOR ENLIGHTENED unit from your\narmy that was selected as the target of one or\nmore of the attacking unit's attacks.\n\nEffect: Until the end of the phase, each time\nan attack targets your unit, subtract 1 from\nthe Hit roll."
+      },
       "Stratagem§Mutant Cunning": {
         "keywords": {
           "Turn": [
@@ -24716,6 +26264,24 @@
           ]
         },
         "text": "WHEN: Your Shooting phase.\n\nTARGET: One Leagues of Votann unit from your army that has not been selected to shoot this phase.\n\nEFFECT: Until the end of the phase, ranged weapons equipped by models in your unit have the [LETHAL HITS] ability."
+      },
+      "Stratagem§Paradigm of Rivalry": {
+        "keywords": {
+          "Keywords": [
+            "Prism of Zadophon",
+            "Thousand Sons"
+          ],
+          "Category": [
+            "Strategic Ploy"
+          ],
+          "Turn": [
+            "Yours"
+          ],
+          "Phase": [
+            "Shooting"
+          ]
+        },
+        "text": "When: Start of your Shooting phase, just after\na THOUSAND SONS PSYKER model from your\narmy has attempted a Ritual.\n\nTarget: One other THOUSAND SONS PSYKER\nmodel from your army.\n\nEffect: Your model can attempt one Ritual no\nmodel from your army has manifested this\nturn."
       },
       "Stratagem§Payment in Kind": {
         "keywords": {
@@ -27449,6 +29015,129 @@
           }
         }
       },
+      "Unit§Frenzied Reavers-Jakhals": {
+        "aspects": {
+          "Label": "Jakhals"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Blessings of Khorne",
+            {
+              "item": "Model§The Jakhal Pack Leader",
+              "assets": {
+                "traits": [
+                  "Ranged Weapon§Jakals-Autopistol",
+                  "Melee Weapon§Jakhals-Chainblades"
+                ]
+              }
+            },
+            {
+              "item": "Model§The Dishonoured",
+              "assets": {
+                "traits": [
+                  "Melee Weapon§Jakhals-Skullsmasher and mangler"
+                ]
+              }
+            },
+            {
+              "item": "Model§Jakhal",
+              "assets": {
+                "traits": [
+                  "Ranged Weapon§Jakals-Autopistol",
+                  "Melee Weapon§Jakhals-Chainblades"
+                ]
+              },
+              "quantity": 7
+            },
+            {
+              "item": "Model§Jakhal",
+              "assets": {
+                "traits": [
+                  "Ranged Weapon§Jakals-Autopistol",
+                  "Melee Weapon§Jakhals-Mauler chainblade"
+                ]
+              }
+            }
+          ]
+        },
+        "keywords": {
+          "Keywords": [
+            "Chaos",
+            "Infantry",
+            "Jakhals",
+            "Khorne"
+          ],
+          "Faction": [
+            "World Eaters"
+          ],
+          "Source": [
+            "10th Edition Combat Patrol"
+          ]
+        }
+      },
+      "Unit§Frenzied Reavers-Khorne Berzerkers": {
+        "aspects": {
+          "Label": "Khorne Berzerkers"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Blessings of Khorne",
+            {
+              "item": "Model§Khorne Berzerker Champion",
+              "assets": {
+                "traits": [
+                  "Ranged Weapon§Khorne Berzerkers-Plasma pistol",
+                  "Melee Weapon§Khorne Berzerkers-Chainblade"
+                ]
+              }
+            },
+            {
+              "item": "Model§Khorne Berzerker",
+              "quantity": 2,
+              "assets": {
+                "traits": [
+                  "Ranged Weapon§Khorne Berzerkers-Plasma pistol",
+                  "Melee Weapon§Khorne Berzerkers-Chainblade"
+                ]
+              }
+            },
+            {
+              "item": "Model§Khorne Berzerker",
+              "quantity": 2,
+              "assets": {
+                "traits": [
+                  "Ranged Weapon§Khorne Berzerkers-Bolt pistol",
+                  "Melee Weapon§Khorne Berzerkers-Khornate eviscerator"
+                ]
+              }
+            },
+            {
+              "item": "Model§Khorne Berzerker",
+              "quantity": 5,
+              "assets": {
+                "traits": [
+                  "Melee Weapon§Khorne Berzerkers-Chainblade",
+                  "Ranged Weapon§Khorne Berzerkers-Bolt pistol"
+                ]
+              }
+            }
+          ]
+        },
+        "keywords": {
+          "Source": [
+            "10th Edition Combat Patrol"
+          ],
+          "Faction": [
+            "World Eaters"
+          ],
+          "Keywords": [
+            "Berzerkers",
+            "Chaos",
+            "Infantry",
+            "Khorne"
+          ]
+        }
+      },
       "Unit§Gordrang’s Gitstompas—Boyz 1": {
         "aspects": {
           "Label": "Boyz"
@@ -28452,13 +30141,13 @@
                 }
               }
             },
-            "Ability§Blessings of Khorne",
+            "Ability§Karagar the Blooded-Blessings of Khorne",
             {
               "item": "Model§Jakhal Pack Leader",
               "assets": {
                 "traits": [
-                  "Ranged Weapon§Jakhals—Autopistol",
-                  "Melee Weapon§Jakhals—Jakhal chainblades"
+                  "Ranged Weapon§Karagar's Rampagers-Jakhals—Autopistol",
+                  "Melee Weapon§Karagar's Rampagers-Jakhals—Jakhal chainblades"
                 ]
               }
             },
@@ -28466,36 +30155,35 @@
               "item": "Model§Dishonoured",
               "assets": {
                 "traits": [
-                  "Melee Weapon§Jakhals—Skullsmasher"
+                  "Melee Weapon§Karagar's Rampagers-Jakhals—Skullsmasher"
                 ]
               }
             },
             {
-              "item": "Model§Jakhal",
+              "item": "Model§Karagar's Rampagers-Jakhal",
               "assets": {
                 "traits": [
-                  "Ranged Weapon§Jakhals—Autopistol",
-                  "Melee Weapon§Jakhals—Mauler chainblade"
+                  "Melee Weapon§Karagar's Rampagers-Jakhals—Mauler chainblade",
+                  "Ranged Weapon§Karagar's Rampagers-Jakhals—Autopistol"
                 ]
               }
             },
             {
-              "item": "Model§Jakhal",
+              "item": "Model§Karagar's Rampagers-Jakhal",
               "assets": {
                 "traits": [
-                  "Ranged Weapon§Jakhals—Autopistol",
-                  "Melee Weapon§Jakhals—Jakhal chainblades",
+                  "Ranged Weapon§Karagar's Rampagers-Jakhals—Autopistol",
+                  "Melee Weapon§Karagar's Rampagers-Jakhals—Jakhal chainblades",
                   "Wargear§Icon of Khorne"
                 ]
               }
             },
             {
-              "item": "Model§Jakhal",
-              "quantity": "6",
+              "item": "Model§Karagar's Rampagers-Jakhal",
               "assets": {
                 "traits": [
-                  "Ranged Weapon§Jakhals—Autopistol",
-                  "Melee Weapon§Jakhals—Jakhal chainblades"
+                  "Ranged Weapon§Karagar's Rampagers-Jakhals—Autopistol",
+                  "Melee Weapon§Karagar's Rampagers-Jakhals—Jakhal chainblades"
                 ]
               }
             }
@@ -28523,54 +30211,54 @@
         },
         "assets": {
           "traits": [
-            "Ability§Blessings of Khorne",
+            "Ability§Karagar the Blooded-Blessings of Khorne",
             {
-              "item": "Model§Khorne Berzerker Champion",
+              "item": "Model§Karagar's Rampagers-Khorne Berzerker Champion",
               "assets": {
                 "traits": [
-                  "Ranged Weapon§Khorne Berzerkers—Plasma pistol",
-                  "Melee Weapon§Khorne Berzerkers—Berzerker chainblade"
+                  "Melee Weapon§Karagar's Rampagers-Khorne Berzerkers—Berzerker chainblade",
+                  "Ranged Weapon§Karagar's Rampagers-Khorne Berzerkers—Plasma pistol"
                 ]
               }
             },
             {
-              "item": "Model§Khorne Berzerker",
+              "item": "Model§Karagar's Rampagers-Khorne Berzerker",
               "assets": {
                 "traits": [
-                  "Ranged Weapon§Khorne Berzerkers—Plasma pistol",
-                  "Melee Weapon§Khorne Berzerkers—Berzerker chainblade"
+                  "Ranged Weapon§Karagar's Rampagers-Khorne Berzerkers—Plasma pistol",
+                  "Melee Weapon§Karagar's Rampagers-Khorne Berzerkers—Berzerker chainblade"
                 ]
               }
             },
             {
-              "item": "Model§Khorne Berzerker",
+              "item": "Model§Karagar's Rampagers-Khorne Berzerker",
               "assets": {
                 "traits": [
-                  "Ranged Weapon§Khorne Berzerkers—Plasma pistol",
-                  "Melee Weapon§Khorne Berzerkers—Berzerker chainblade",
+                  "Melee Weapon§Karagar's Rampagers-Khorne Berzerkers—Berzerker chainblade",
+                  "Ranged Weapon§Karagar's Rampagers-Khorne Berzerkers—Plasma pistol",
                   "Wargear§Icon of Khorne"
                 ]
               }
             },
             {
-              "item": "Model§Khorne Berzerker",
-              "quantity": "2",
+              "item": "Model§Karagar's Rampagers-Khorne Berzerker",
               "assets": {
                 "traits": [
-                  "Ranged Weapon§Khorne Berzerkers—Bolt pistol",
-                  "Melee Weapon§Khorne Berzerkers—Khornate eviscerator"
+                  "Ranged Weapon§Karagar's Rampagers-Khorne Berzerkers—Bolt pistol",
+                  "Melee Weapon§Karagar's Rampagers-Khorne Berzerkers—Khornate eviscerator"
                 ]
-              }
+              },
+              "quantity": 2
             },
             {
-              "item": "Model§Khorne Berzerker",
-              "quantity": "5",
+              "item": "Model§Karagar's Rampagers-Khorne Berzerker",
               "assets": {
                 "traits": [
-                  "Ranged Weapon§Khorne Berzerkers—Bolt pistol",
-                  "Melee Weapon§Khorne Berzerkers—Berzerker chainblade"
+                  "Ranged Weapon§Karagar's Rampagers-Khorne Berzerkers—Bolt pistol",
+                  "Melee Weapon§Karagar's Rampagers-Khorne Berzerkers—Berzerker chainblade"
                 ]
-              }
+              },
+              "quantity": 5
             }
           ]
         },
@@ -29473,6 +31161,97 @@
             "Mounted",
             "Beast Snagga",
             "Squighog Boyz"
+          ]
+        }
+      },
+      "Unit§Prism of Zadophon-Rubric Marines": {
+        "aspects": {
+          "Label": "Rubric Marines"
+        },
+        "assets": {
+          "traits": [
+            "Ability§Cabal of Sorcerers",
+            {
+              "item": "Model§Aspiring Sorcercer",
+              "assets": {
+                "traits": [
+                  "Melee Weapon§Rubric Marines-Force weapon",
+                  "Ranged Weapon§Rubric Marines-Inferno bolt pistol"
+                ]
+              }
+            },
+            {
+              "item": "Model§Rubric Marine",
+              "quantity": 5,
+              "assets": {
+                "traits": [
+                  "Ranged Weapon§Rubric Marines-Warpflamer",
+                  "Melee Weapon§Rubric Marines-Close combat weapon"
+                ]
+              }
+            },
+            {
+              "item": "Model§Rubric Marine",
+              "quantity": 3,
+              "assets": {
+                "traits": [
+                  "Ranged Weapon§Rubric Marines-Inferno boltgun",
+                  "Melee Weapon§Rubric Marines-Close combat weapon"
+                ]
+              }
+            },
+            {
+              "item": "Model§Rubric Marine",
+              "assets": {
+                "traits": [
+                  "Ranged Weapon§Rubric Marines-Soulreaper cannon",
+                  "Melee Weapon§Rubric Marines-Close combat weapon"
+                ]
+              }
+            },
+            {
+              "item": "Ability§Invulnerable",
+              "stats": {
+                "x": {
+                  "value": "5+"
+                }
+              }
+            }
+          ]
+        },
+        "keywords": {
+          "Faction": [
+            "Thousand Sons"
+          ],
+          "Source": [
+            "10th Edition Combat Patrol"
+          ]
+        }
+      },
+      "Unit§Prism of Zadophon-Tzaangor Enlightened": {
+        "aspects": {
+          "Label": "Tzaangor Enlightened"
+        },
+        "assets": {
+          "traits": [
+            {
+              "item": "Ability§Invulnerable",
+              "stats": {
+                "x": {
+                  "value": "5+"
+                }
+              }
+            },
+            "Ability§Prophesied Doom",
+            {
+              "item": "Model§Tzaangor Enlightened",
+              "quantity": 3,
+              "assets": {
+                "traits": [
+                  "Melee Weapon§Tzaangor Enlightened-Divining Spear"
+                ]
+              }
+            }
           ]
         }
       },
@@ -31230,7 +33009,7 @@
         "assets": {
           "traits": [
             "Ability§Deep Strike",
-            "Ability§Cabal of Sorcerers",
+            "Ability§The Coven Temporus-Cabal of Sorcerers",
             "Ability§Implacable Guardians",
             {
               "item": "Ability§Invulnerable",
