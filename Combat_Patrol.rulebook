@@ -1,6 +1,6 @@
 {
   "name": "Combat Patrol",
-  "revision": "10.14.2",
+  "revision": "10.14.3",
   "game": "Warhammer 40k",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -3429,7 +3429,7 @@
             },
             "statType": "rank",
             "tracked": true,
-            "value": null,
+            "value": "Fearsome Prescense",
             "visibility": "normal"
           },
           "Ld": {
