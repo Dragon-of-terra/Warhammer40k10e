@@ -1,6 +1,6 @@
 {
   "name": "Combat Patrol",
-  "revision": "10.14.1",
+  "revision": "10.14.2",
   "game": "Warhammer 40k",
   "genre": "sci-fi",
   "publisher": "Games Workshop",
@@ -31277,6 +31277,18 @@
           "Source": [
             "10th Edition Combat Patrol"
           ]
+        },
+        "stats": {
+          "Led by": {
+            "ranks": {
+              "Kaa'Skrek": {
+                "number": 1,
+                "order": 1,
+                "term": "Character§Prism of Zadophon-Kaa'Skrek"
+              }
+            },
+            "value": "-"
+          }
         }
       },
       "Unit§Protectors of Aun’Shar—Ghostkeel Battlesuit": {
